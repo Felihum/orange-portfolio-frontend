@@ -14,7 +14,7 @@ function CardPerfil() {
                     <p>Brasil</p>
                 </div>
                 <div className="container-btn-adicionar">
-                    <ButtonAdd />
+                    <ButtonAdd onClick={} />
                 </div>
             </div>
         </div>

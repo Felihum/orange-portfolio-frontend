@@ -1,9 +1,9 @@
 import "./ButtonAdd.css"
 
-function ButtonAdd() {
+function ButtonAdd({ setOpenModal }) {
     return (
         <div className="container-btn-adicionar">
-            <button>Adicionar Projeto</button>
+            <button onClick={() => setOpenModal(true)}>Adicionar Projeto</button>
         </div>
     );
 }
