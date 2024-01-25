@@ -5,10 +5,12 @@ import './AlertSucess.css'
 
 export default function AlertSucess() {
     return (
-      <Stack sx={{ width: '100%' }} spacing={2} className='alertSucess'>
-        <Alert variant="filled" severity="success">
-          Cadastro feito com sucesso
-        </Alert>
-      </Stack>
+      <div className=''>
+        <Stack sx={{ width: '100%'}} spacing={2} className='alertSucess'>
+          <Alert variant="filled" severity="success">
+            Cadastro feito com sucesso
+          </Alert>
+        </Stack>
+      </div>
     );
 }

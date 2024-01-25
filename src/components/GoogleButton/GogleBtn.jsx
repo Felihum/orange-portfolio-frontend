@@ -1,4 +1,3 @@
-import '../styles/elements.css'
 import './GoogleBtn.css'
 
 export default function GoogleBtn(){

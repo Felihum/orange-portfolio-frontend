@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import GoogleBtn from "../GogleButton/GogleBtn";
-import Button from "../ButtonOrange/Button";
-import InputText from "../inputText/InputText";
-import InputPassword from "../inputPassword/InputPass";
-import AlertSucess from "../alerts/AlertSucess";
+import GoogleBtn from "../../components/GoogleButton/GogleBtn";
+import Button from "../../components/ButtonOrange/Button";
+import InputText from "../../components/inputText/InputText";
+import InputPassword from "../../components/inputPassword/InputPass";
+import AlertSucess from "../../components/alerts/AlertSucess";
 import './Cad.css'
 
 export default function Cad(){

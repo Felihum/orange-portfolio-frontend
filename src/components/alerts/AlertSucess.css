@@ -1,3 +1,12 @@
-.alertSucess{
-    position: relative;
+
+
+@media (max-width: 360px){
+    .alertSucess{
+        position: relative;
+        top: 20px;
+    }
+    .container{
+        width: 100%;
+        background-color: red;
+    }
 }

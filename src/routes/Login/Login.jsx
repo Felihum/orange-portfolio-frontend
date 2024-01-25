@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./Login.css"
-import GoogleBtn from "../../components/GogleButton/GogleBtn";
+import GoogleBtn from "../../components/GoogleButton/GogleBtn";
 import Button from "../../components/ButtonOrange/Button";
 import InputText from "../../components/inputText/InputText";
 import InputPassword from "../../components/inputPassword/InputPass";
