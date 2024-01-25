@@ -1,12 +1,12 @@
-import AddFirst from "../components/AddFirst/AddFirst";
-import AvatarIcon from "../components/AvatarIcon/AvatarIcon";
+import AddFirst from "../../components/AddFirst/AddFirst";
+import AvatarIcon from "../../components/AvatarIcon/AvatarIcon";
 //import ButtonAdd from "../components/ButtonAdd/ButtonAdd"
-import NavBar from "../components/NavBar/NavBar"
-import SearchBar from "../components/SearchBar/SearchBar";
+import NavBar from "../../components/NavBar/NavBar"
+import SearchBar from "../../components/SearchBar/SearchBar";
 import "./MyPortfolio.css"
 import { Skeleton } from "@mui/material";
 import { useState } from "react";
-import ModalAddProjeto from "../components/ModalAddProjeto/ModalAddProjeto";
+import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
 
 function MyPortfolio() {
 
