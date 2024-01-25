@@ -1,5 +1,5 @@
 import logo from "../../images/Logo orange.png"
-
+import burger from "../../images/MenuFilled.png"
 import AvatarIcon from "../AvatarIcon/AvatarIcon";
 import { Link } from "react-router-dom";
 import "./NavBar.css"
@@ -10,6 +10,9 @@ function NavBar() {
         <div className='menu'>
             <div className="rading-container">
                 <div className="header">
+                    <div className="burger-container">
+                        <img src={burger} />
+                    </div>
                     <div className='container-logo'>
                         <img src={logo} className="image-logo" />
                     </div>

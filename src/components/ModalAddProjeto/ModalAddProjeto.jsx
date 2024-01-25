@@ -14,7 +14,7 @@ function ModalAddProjeto({ isOpen, setModalOpen }) {
                     <div className="input-form-container">
                         <div className="text-input">
                             <p>Selecione o conteúdo que você deseja fazer upload</p>
-                            <AddFirst />
+                            <AddFirst label="" />
                         </div>
                         <div className="input-form">
                             <div className="input-default">

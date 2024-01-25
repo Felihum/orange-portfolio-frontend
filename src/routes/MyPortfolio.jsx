@@ -39,7 +39,7 @@ function MyPortfolio() {
                     <SearchBar />
                 </div>
                 <div className="project-section">
-                    <AddFirst />
+                    <AddFirst label="Adicione seu primeiro projeto" />
                     <Skeleton className="skeleton" animation={false} variant="rectangular" width={389} height={258} />
                     <Skeleton className="skeleton" animation={false} variant="rectangular" width={389} height={258} />
                     <Skeleton className="skeleton" animation={false} variant="rectangular" width={389} height={258} /> 

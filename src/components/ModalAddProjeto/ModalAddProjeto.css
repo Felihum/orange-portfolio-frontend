@@ -153,3 +153,64 @@
     letter-spacing: 0.46px;
     text-transform: uppercase;
 }
+
+@media screen and (max-width: 660px){
+    .modal-card{
+        width: 452px;
+        height: 837px;
+        margin-top: 20px;
+        padding: 24px 32px;
+        background-color: white;
+    }
+    
+    .input-form-container{
+        flex-direction: column;
+    }
+
+    .input-form .input-default{
+        width: 390px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .modal-card{
+        width: 452px;
+        height: 837px;
+        padding: 24px 32px;
+        background-color: white;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .input-form-container{
+        flex-direction: column;
+    }
+
+    .input-form .input-default{
+        width: 390px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .modal-card{
+        margin-top: 148px;
+        width: 312px;
+        height: 859px;
+        padding: 21px 25px;
+        background-color: white;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .input-form-container{
+        flex-direction: column;
+    }
+
+    .input-form-container .text-input p{
+        width: 263px;
+    }
+
+    .input-form .input-default{
+        width: 263px;
+    }
+}

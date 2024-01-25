@@ -20,3 +20,9 @@
 .input{
     width: 513px;
 }
+
+@media screen and (max-width: 500px){
+    .input{
+        width: 430px;
+    }
+}
