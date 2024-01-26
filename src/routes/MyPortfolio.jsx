@@ -7,6 +7,7 @@ import "./MyPortfolio.css"
 import { Skeleton } from "@mui/material";
 import { useState } from "react";
 import ModalAddProjeto from "../components/ModalAddProjeto/ModalAddProjeto";
+import ModalSuccess from "../components/ModalSuccess/ModalSuccess";
 
 function MyPortfolio() {
 
@@ -16,6 +17,9 @@ function MyPortfolio() {
         <div>
             <div className="modal-section">
                     <ModalAddProjeto isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)} />
+            </div>
+            <div className="modal-success-section">
+                    <ModalSuccess />
             </div>
             <div className="desktop-version">
                 <NavBar />

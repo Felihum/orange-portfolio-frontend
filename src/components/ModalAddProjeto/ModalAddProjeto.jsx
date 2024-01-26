@@ -42,7 +42,6 @@ function ModalAddProjeto({ isOpen, setModalOpen }) {
                             <div className="btn-cancelar">
                                 <button onClick={setModalOpen}>Cancelar</button>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
