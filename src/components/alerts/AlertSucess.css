@@ -5,7 +5,7 @@
         position: relative;
         top: 20px;
     }
-    .container{
+    .container_alert_sucess{
         width: 100%;
         background-color: red;
     }

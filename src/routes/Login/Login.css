@@ -9,6 +9,7 @@ body{
 .login-form-wrap{
     background-color: #fff;
     color: #515255;
+
 }
 
 .login-form{
@@ -43,9 +44,16 @@ input{
     /* [Orange P] Style Guide/Subtitle 1 */
 }
 
+.textFieldLogin{
+    width: 100%;
+}
+
 /* Media queries */
 
-{
+@media(max-width: 360px){
+    .containerImgLogin{
+        display: none;
+    }
     .login-form-wrap{
         position: relative;
         margin-top: 30%;
@@ -72,6 +80,14 @@ input{
         font-weight: 400;
         line-height: 16px; /* 100% */
         letter-spacing: 0.15px;
+    }
+}
+
+@media(min-width:1280px){
+    .containerImgLogin{
+        display: inline;
+        width: 100px;
+        height: 100px;
     }
 }
 
