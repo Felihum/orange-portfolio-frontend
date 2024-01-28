@@ -2,8 +2,9 @@
     margin: none;
 }
 
-body{
-
+html, body {
+    height: 100%;
+    margin: 0; /* Certifica-se de que não há margens extras na página */
 }
 
 .login-form-wrap{
@@ -48,15 +49,17 @@ input{
     width: 100%;
 }
 
+.containerImgLogin{
+    display: none;
+}
+
 /* Media queries */
 
-@media(max-width: 360px){
-    .containerImgLogin{
-        display: none;
-    }
+@media(max-width: 3600px){
     .login-form-wrap{
-        position: relative;
+        /* position: relative;
         margin-top: 30%;
+        width: 50%; */
     }
     .login-form{
         position: relative;
@@ -70,6 +73,40 @@ input{
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
+        margin-top: 100px;
+    }
+    
+    .tit2login{
+    
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 100% */
+        letter-spacing: 0.15px;
+    }
+}
+
+@media(max-width: 360px){
+
+    .login-form-wrap{
+        /* position: relative;
+        margin-top: 30%;
+        width: 50%; */
+    }
+    .login-form{
+        position: relative;
+
+    }
+    .tit1Login{
+        text-align: center;
+        /* [Orange P] Style Guide/H5 */
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin-top: 100px;
     }
     
     .tit2login{
@@ -84,10 +121,31 @@ input{
 }
 
 @media(min-width:1280px){
+    .mainContainer{
+        background-color: red;
+        display: flex;
+        height: 100vh;
+    }
     .containerImgLogin{
         display: inline;
         width: 100px;
         height: 100px;
+    }
+    .containerImgLogin{
+        background-color: greenyellow;
+        flex: 1;
+        width: 10%;
+        height: 100vh;
+    }
+    .imgLogin{
+        max-width: 525px;
+    }
+    .login-form-wrap{
+        width: 50%;
+        background-color: blue;
+        position: relative;
+        top: 25%;
+        height: 50%;
     }
 }
 

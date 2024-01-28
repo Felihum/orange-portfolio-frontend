@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./Login.css"
 import GoogleBtn from "../../components/GoogleButton/GogleBtn";
-import Button from "../../components/ButtonOrange/Button";
+import Button from "../../components/ButtonOrange/ButtonOrange";
 import InputText from "../../components/inputText/InputText";
 import InputPassword from "../../components/inputPassword/InputPass";
 import ImageLogin from '../../images/Login_Cad/img_login-1.png'
@@ -56,14 +56,17 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 export default function Login(){
     return(
-        <div>
+        <div className="mainContainer">
           <div className="containerImgLogin">
-            <img src={ImageLogin}  className="imgLogin" style={{"width":"300px"}} />
+            <img src={ImageLogin}  className="imgLogin" />
           </div>
+          <div className="containerTit">
+              <p className="tit1Login">Entre no Orange Portifólio</p>
+            </div>
           <div className='login-form-wrap'>
-            <p className="tit1Login">Entre no Orange Portifólio</p>
             <GoogleBtn></GoogleBtn>
             <p className="tit2login">Faça login com email</p>
+            <br></br>
             <TextField
               className="textFieldLogin"              
               type="email" 
@@ -75,6 +78,7 @@ export default function Login(){
             <form className='login-form'>
               <InputPassword></InputPassword>
               <Button value="Entrar" classN="btnLaranja"></Button>
+              <br/>
               <a href="#">Cadastre-se</a>
             </form>
           </div>

@@ -1,4 +1,7 @@
+@import "../../GeneralStyle/GeneralStyle.css";
+
 .inputText{
+    background-color: var(--cor-teste);
     width: 100%;
     color: var(--Neutral-Colors-Neutral-120, #303133);
     font-feature-settings: 'clig' off, 'liga' off;
