@@ -3,7 +3,7 @@
 .inputText{
     background-color: var(--cor-teste);
     width: 100%;
-    color: var(--Neutral-Colors-Neutral-120, #303133);
+    color: var(--color--neutal-120);
     font-feature-settings: 'clig' off, 'liga' off;
 
     /* [Orange P] Style Guide/Label */
@@ -15,8 +15,3 @@
     letter-spacing: 0.15px;
 }
 
-.boxInput{
-    background-color: blue;
-
-    width: 100%;
-}

@@ -18,13 +18,13 @@
     
     /* Cores Neutras */
     --color-neutral-60 : #FCFDFF ;
-    --color-neutral-80 : #E6E9F2;
-    --color-neutral-90 : #C2C4CC;
-    --color-neutral-100 : #A1A3AA;
-    --color-neutral-110 : #818388;
-    --color-neutral-120 : #515255;
-    --color-neutral-130 : #303133;
-    --color-neutral-140 : #0B0C0D;    
+    --color-neutral-70 : #E6E9F2;
+    --color-neutral-80 : #C2C4CC;
+    --color-neutral-90 : #A1A3AA;
+    --color-neutral-100 : #818388;
+    --color-neutral-110 : #515255;
+    --color-neutral-120 : #303133;
+    --color-neutral-130 : #0B0C0D;  
 
     /* Cores de sucesso */
     --color-sucess-60 : #EEFFBB;

@@ -1,41 +1,38 @@
-body{
-    height: 640px;
-}
+@import "../../GeneralStyle/GeneralStyle.css";
+
+/* Independente de tamanho */
 .containerLoginTag{
     position: relative;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    padding: 45px 109px;
-    width: 100%;
-    /* height: 100%; */
+    background-color: aqua;
+}
+
+.containerLoginTag{
+    background-color: yellow;
     height: 100vh;
-    /* background-color: greenyellow; */
+}
+
+.containerFormLogin{
+    background-color: rgb(247, 119, 119);
+    width: 100%;
 }
 
 .loginCard{
+    background-color: rgb(208, 175, 238);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 312px;
-    gap: 32px;
-    /* background-color: yellow; */
 }
 
-.tit2Login{
-    display: flex;
-    height: var(--4, 32px);
-    padding: var(--none, 0px);
-    align-items: flex-start;
-    gap: var(--none, 0px);
-    flex-shrink: 0;
-    align-self: stretch;
+.tit1Login{
+    background-color: red;
+    width: 100%;
 }
 
 .tit2Login > p{
-    color: var(--Neutral-Colors-Neutral-110, #515255);
+    color: var(--color-neutral-110);
 
     /* [Orange P] Style Guide/Subtitle 1 */
     font-family: Roboto;
@@ -44,33 +41,23 @@ body{
     font-weight: 400;
     line-height: 16px; /* 100% */
     letter-spacing: 0.15px;
-}
-
-.btnEntrarLogin{
-    color: var(--Neutral-Colors-Neutral-60, #FCFDFF);
-    font-feature-settings: 'clig' off, 'liga' off;
-
-    /* [Orange P] Style Guide/Button */
-    font-family: Roboto;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 26px; /* 173.333% */
-    letter-spacing: 0.46px;
-    text-transform: uppercase;
-}
-
-.tit1Login{
-    /* background-color: red; */
-}
-
-.containerFormLogin{
     width: 100%;
 }
 
-.containerFormLogin{
-    justify-content: center;
-    /* background-color: blueviolet; */
+.inputsLogin{
+    background-color: rgb(81, 81, 245);
+}
+
+.linksLogin{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.linksLogin > a{
+    text-decoration: none;
+    color: var(--color-neutral-100)
 }
 
 .btnLaranja{
@@ -92,9 +79,81 @@ body{
     flex-shrink: 0;
     font-size: 
     15px;
+    margin-bottom: 16px;
 }
 
-.linksLogin > a{
-    /* background-color: red; */
-    width: 100%;
+@media(max-width: 360px){
+        /* body{
+        height: 640px;
+        } */
+    .containerLoginTag{
+        /* justify-content: center; */
+        align-items: center;
+        padding: 45px 109px;
+        width: 100%;
+        /* height: 100%; */
+        /* background-color: #F52; */
+        /* background-color: greenyellow; */
+    }
+
+    .loginCard{
+        width: 312px;
+        gap: 32px;
+        /* background-color: yellow; */
+    }
+
+    .tit2Login{
+        display: flex;
+        height: var(--4, 32px);
+        padding: var(--none, 0px);
+        align-items: flex-start;
+        gap: var(--none, 0px);
+        flex-shrink: 0;
+        align-self: stretch;
+    }
 }
+
+
+@media (max-width: 500){
+    .containerLoginTag{
+        /* justify-content: center; */
+        align-items: center;
+        padding: 45px 109px;
+        width: 100%;
+        /* height: 100%; */
+        /* background-color: #F52; */
+        /* background-color: greenyellow; */
+    }
+
+    .loginCard{
+        width: 312px;
+        gap: 32px;
+        /* background-color: yellow; */
+    }
+
+    .tit2Login{
+        display: flex;
+        height: var(--4, 32px);
+        padding: var(--none, 0px);
+        align-items: flex-start;
+        gap: var(--none, 0px);
+        flex-shrink: 0;
+        align-self: stretch;
+    }
+}
+
+
+
+
+
+/* .btnEntrarLogin{
+    color: var(--Neutral-Colors-Neutral-60, #FCFDFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; 
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+} */

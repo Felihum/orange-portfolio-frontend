@@ -23,31 +23,33 @@ export default function LoginTeste(){
                         <p>Faça seu login com email</p>
                     </div>
                     {/* Elemento */}
-                    <InputText
-                    className="textFieldLogin"
-                    type="email"
-                    name="email"
-                    required
-                    label="Endereço de email"
-                    variant="outlined"
-                    ></InputText>
-                    {/* elemento */}
-                    <InputPassword></InputPassword>
-                    <button className="btnLaranja">ENTRAR</button>
-                    {/* <ButtonOrange
-                     value="Entrar"
-                     classN="btnLaranja"
-                     ></ButtonOrange> */}
+
+
+                    <div className="inputsLogin">
+                        <InputText
+                        className="textFieldLogin"
+                        type="email"
+                        name="email"
+                        required
+                        label="Endereço de email"
+                        variant="outlined"
+                        ></InputText>
+                        {/* elemento */}
+                        <InputPassword></InputPassword>
+                        <button className="btnLaranja">ENTRAR</button>
+                        {/* <ButtonOrange
+                         value="Entrar"
+                         classN="btnLaranja"
+                         ></ButtonOrange> */}
+                    </div>
+
+                                 
+                <div className="linksLogin">
+                    <a href="#">Cadastre-se</a>
+                    <a href="#">Esqueci minha senha</a>
+                </div>
                 </div>
             </div>
-
-            
-            <div className="linksLogin">
-                <a href="#">Cadastre-se</a>
-                {/* <a href="#">Esqueci minha senha</a> */}
-            </div>
-
-
         </div>
     )
 }
