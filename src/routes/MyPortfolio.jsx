@@ -40,7 +40,7 @@ function MyPortfolio() {
                 </div>
                 <div className="project-section">
                     <AddFirst label="Adicione seu primeiro projeto" onClick={setOpenModal} />
-                    <Project />
+                    <Project setOpenModal={setOpenModal} />
                 </div>
             </div>
         </div>

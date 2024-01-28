@@ -1,12 +1,17 @@
 import imgProjeto from "../../images/img_projeto.png";
 import AvatarIcon from "../AvatarIcon/AvatarIcon";
+import EditIcon from "../EditIcon/EditIcon";
 import Tag from "../Tag/Tag";
 import "./Project.css";
 
-function Project() {
+function Project({ setOpenModal }) {
     return (
         <div className="project-container">
+            <div className="edit-icon-container">
+                <EditIcon setOpenModal={setOpenModal} />
+            </div>
             <div className="project-image-div">
+                
                 <img src={imgProjeto} />
             </div>
             <div className="description-section">
@@ -18,7 +23,6 @@ function Project() {
                         </div>
                     </div>
                 </div>
-                
                 <div className="tag-container">
                     <Tag label="UX" />
                     <Tag label="Web" />

@@ -15,6 +15,16 @@
     gap: 89px;
 }
 
+.edit-icon-container{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 389px;
+    padding: 16px;
+    margin-top: 8px;
+}
+
 .user-infos-container{
     display: flex;
     height: var(--4, 32px);

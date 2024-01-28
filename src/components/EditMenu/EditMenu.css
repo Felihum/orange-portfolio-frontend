@@ -1,0 +1,79 @@
+.menu-edit-div{
+    position: absolute;
+    display: inline-flex;
+    padding: 16px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: var(--Neutral-Colors-Neutral-60, #FCFDFF);
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.30);
+}
+
+.arrow-div{
+    width: 15px;
+    height: var(--none, 0px);
+    
+}
+
+.arrow{
+    position: absolute;
+    right: 24px;
+    top: -9px;
+    
+}
+
+.btn-editar{
+    cursor: pointer;
+    display: flex;
+    width: 208px;
+    align-items: flex-start;
+    border-radius: var(--none, 0px);
+    background: var(--Neutral-Colors-Neutral-60, #FCFDFF);
+}
+
+.btn-editar button{
+    gap: var(--1, 8px);
+    padding: var(--1, 8px) var(--3, 24px);
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    color: var(--Neutral-Colors-Neutral-110, var(--Neutral-Colors-Neutral-110, #515255));
+    /* [Orange P] Style Guide/Subtitle 1 */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 100% */
+    letter-spacing: 0.15px;
+}
+
+.btn-editar:hover{
+    background: var(--Color-Brand-Secundria-Secondary-60, #FEC);
+}
+
+.btn-excluir{
+    cursor: pointer;
+    display: flex;
+    width: 208px;
+    align-items: flex-start;
+    background: var(--Neutral-Colors-Neutral-60, #FCFDFF);
+}
+
+.btn-excluir:hover{
+    background: var(--Color-Brand-Secundria-Secondary-60, #FEC);
+}
+
+.btn-excluir button{
+    gap: var(--1, 8px);
+    padding: var(--1, 8px) var(--3, 24px);
+    color: var(--Neutral-Colors-Neutral-110, var(--Neutral-Colors-Neutral-110, #515255));
+    /* [Orange P] Style Guide/Subtitle 1 */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 100% */
+    letter-spacing: 0.15px;
+}
