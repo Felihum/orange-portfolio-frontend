@@ -1,6 +1,7 @@
 import "./ModalSuccess.css"
 import confirmIcon from "../../images/TextInput.png"
 
+// eslint-disable-next-line react/prop-types
 function ModalSuccess({ isOpenSuccess, setModalSuccessOpen }) {
     if(isOpenSuccess){
         return (

@@ -6,16 +6,22 @@ import SearchBar from "../components/SearchBar/SearchBar";
 import "./MyPortfolio.css"
 import { useState } from "react";
 import ModalAddProjeto from "../components/ModalAddProjeto/ModalAddProjeto";
+import ModalDelete from "../components/ModalDelete/ModalDelete";
 import Project from "../components/Project/Project";
+import ModalEdit from "../components/ModalEdit/ModalEdit";
 
 function MyPortfolio() {
 
+    const [openModalEdit, setOpenModalEdit] = useState(false);
+    const [openModalDelete, setOpenModalDelete] = useState(false);
     const [openModal, setOpenModal] = useState(false);
 
     return (
         <div>
             <div className="modal-section">
-                    <ModalAddProjeto isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)} />
+                <ModalAddProjeto isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)} />
+                <ModalDelete isOpen={openModalDelete} setOpenModalDelete={setOpenModalDelete} />
+                <ModalEdit isOpen={openModalEdit} setModalEditOpen={setOpenModalEdit} />
             </div>
             <div className="desktop-version">
                 <NavBar />
@@ -40,7 +46,7 @@ function MyPortfolio() {
                 </div>
                 <div className="project-section">
                     <AddFirst label="Adicione seu primeiro projeto" onClick={setOpenModal} />
-                    <Project setOpenModal={setOpenModal} />
+                    <Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
                 </div>
             </div>
         </div>

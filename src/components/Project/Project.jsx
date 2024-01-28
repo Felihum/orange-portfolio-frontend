@@ -4,11 +4,12 @@ import EditIcon from "../EditIcon/EditIcon";
 import Tag from "../Tag/Tag";
 import "./Project.css";
 
-function Project({ setOpenModal }) {
+// eslint-disable-next-line react/prop-types
+function Project({ setOpenModalEdit, setOpenModalDelete }) {
     return (
         <div className="project-container">
             <div className="edit-icon-container">
-                <EditIcon setOpenModal={setOpenModal} />
+                <EditIcon setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
             </div>
             <div className="project-image-div">
                 

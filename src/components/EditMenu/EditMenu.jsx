@@ -2,7 +2,7 @@ import "./EditMenu.css"
 import arrow from "../../images/Arrow 1.png"
 
 // eslint-disable-next-line react/prop-types
-function EditMenu({ setOpenModal, isOpen }) {
+function EditMenu({ setOpenModalEdit, isOpen, setOpenModalDelete }) {
     if(isOpen){
         return (
             <div className="menu-edit-div">
@@ -10,10 +10,10 @@ function EditMenu({ setOpenModal, isOpen }) {
                     <img className="arrow" src={arrow} />
                 </div>
                 <div className="btn-editar">
-                    <button onClick={() => setOpenModal(true)}>Editar</button>
+                    <button onClick={() => setOpenModalEdit(true)}>Editar</button>
                 </div>
                 <div className="btn-excluir">
-                    <button>Excluir</button>
+                    <button onClick={() => setOpenModalDelete(true)}>Excluir</button>
                 </div>
             </div>
         );

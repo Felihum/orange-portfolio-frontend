@@ -1,10 +1,10 @@
+import "./ModalEdit.css"
 import AddFile from "../AddFile/AddFile";
 import ModalSuccess from "../ModalSuccess/ModalSuccess";
-import "./ModalAddProjeto.css"
 import TextField from "@mui/material/TextField"
 
 // eslint-disable-next-line react/prop-types
-function ModalAddProjeto({ isOpen, setModalOpen}) {
+function ModalEdit({ isOpen, setModalEditOpen }) {
     if(isOpen){
         return (
             <form>
@@ -14,7 +14,7 @@ function ModalAddProjeto({ isOpen, setModalOpen}) {
                     </div>
                     <div className="modal-card">
                         <div className="text-cnt">
-                            <h3>Adicionar projeto</h3>
+                            <h3>Editar projeto</h3>
                         </div>
                         <div className="conteudo-form-section">
                             <div className="input-form-container">
@@ -46,7 +46,7 @@ function ModalAddProjeto({ isOpen, setModalOpen}) {
                                         <button>Salvar</button>
                                     </div>
                                     <div className="btn-cancelar">
-                                        <button onClick={setModalOpen}>Cancelar</button>
+                                        <button onClick={setModalEditOpen}>Cancelar</button>
                                     </div>
                                 </div>
                             </div>
@@ -60,4 +60,4 @@ function ModalAddProjeto({ isOpen, setModalOpen}) {
     return null
 }
 
-export default ModalAddProjeto;
+export default ModalEdit;
