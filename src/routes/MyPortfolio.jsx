@@ -4,10 +4,9 @@ import AvatarIcon from "../components/AvatarIcon/AvatarIcon";
 import NavBar from "../components/NavBar/NavBar"
 import SearchBar from "../components/SearchBar/SearchBar";
 import "./MyPortfolio.css"
-import { Skeleton } from "@mui/material";
 import { useState } from "react";
 import ModalAddProjeto from "../components/ModalAddProjeto/ModalAddProjeto";
-import ModalSuccess from "../components/ModalSuccess/ModalSuccess";
+import Project from "../components/Project/Project";
 
 function MyPortfolio() {
 
@@ -17,9 +16,6 @@ function MyPortfolio() {
         <div>
             <div className="modal-section">
                     <ModalAddProjeto isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)} />
-            </div>
-            <div className="modal-success-section">
-                    <ModalSuccess />
             </div>
             <div className="desktop-version">
                 <NavBar />
@@ -43,10 +39,8 @@ function MyPortfolio() {
                     <SearchBar />
                 </div>
                 <div className="project-section">
-                    <AddFirst label="Adicione seu primeiro projeto" />
-                    <Skeleton className="skeleton" animation={false} variant="rectangular" width={389} height={258} />
-                    <Skeleton className="skeleton" animation={false} variant="rectangular" width={389} height={258} />
-                    <Skeleton className="skeleton" animation={false} variant="rectangular" width={389} height={258} /> 
+                    <AddFirst label="Adicione seu primeiro projeto" onClick={setOpenModal} />
+                    <Project />
                 </div>
             </div>
         </div>

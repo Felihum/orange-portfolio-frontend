@@ -1,20 +1,19 @@
 import CollectionIcon from "../CollectionIcon/CollectionIcon";
-import "./AddFirst.css"
+import "./AddFile.css"
 
 // eslint-disable-next-line react/prop-types
-function AddFirst({ onClick }) {
+function AddFile() {
     return (
-        <div className="add-first-container" onClick={() => onClick(true)}>
+        <div className="add-file-container">
+            <input className="input-img" type="file" />
             <CollectionIcon />
             <div className="text-container">
-                <p className="text-adicione">Adicione seu primeiro projeto</p>
                 <div className="text-compartilhe-container">
                     <p className="text-compartilhe">Compartilhe seu talento com milhares de pessoas</p>
                 </div>
             </div>
-            
         </div>
     );
 }
 
-export default AddFirst;
+export default AddFile;
