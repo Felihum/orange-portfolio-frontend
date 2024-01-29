@@ -204,4 +204,11 @@
         flex: 1;
         box-sizing: border-box;
     }
+    .inputTextNameSurname{
+        display: flex;
+    }
+
+    .inputTextNameSurname > .textFieldLogin{
+        flex: 1;
+    }
 }

@@ -5,6 +5,7 @@ import InputPassword from "../../components/inputPassword/InputPass";
 import ButtonOrange from "../../components/ButtonOrange/ButtonOrange"
 import InputText from "../../components/inputText/InputText";
 import "./LoginTeste.css"
+import imageLogin from "../../images/Login_Cad/img_login-0.png"
 
 
 
@@ -13,16 +14,26 @@ export default function LoginTeste(){
         <div className="containerLoginTag">
 
 
+            <div className="imgLogin">
+                <img src={imageLogin}></img>
+            </div>
+
+
             <div className="loginCard">
+
+
                 <div className="tit1Login">
                     <p>Entre no Orange Portifólio</p>
                 </div>
+
+
                 <GoogleBtn></GoogleBtn>
                 <div className="containerFormLogin">
+
+
                     <div className="tit2Login">
                         <p>Faça seu login com email</p>
                     </div>
-                    {/* Elemento */}
 
 
                     <div className="inputsLogin">
@@ -34,13 +45,8 @@ export default function LoginTeste(){
                         label="Endereço de email"
                         variant="outlined"
                         ></InputText>
-                        {/* elemento */}
                         <InputPassword></InputPassword>
                         <button className="btnLaranja">ENTRAR</button>
-                        {/* <ButtonOrange
-                         value="Entrar"
-                         classN="btnLaranja"
-                         ></ButtonOrange> */}
                     </div>
 
                                  
