@@ -1,7 +1,7 @@
 import NavBar from "../../components/NavBar/NavBar";
 import { TextField } from "@mui/material";
-import Project from "../../components/Project/Project";
 import "./Discover.css"
+import ProjectDescobrir from "../../components/ProjectDescobrir/ProjectDescobrir";
 
 function Discover() {
     return (
@@ -20,7 +20,7 @@ function Discover() {
                     <TextField className="search-tag" label="Buscar tags" variant="outlined" />
                 </div>
                 <div className="project-section">
-                    <Project />
+                    <ProjectDescobrir />
                 </div>
             </div>
             

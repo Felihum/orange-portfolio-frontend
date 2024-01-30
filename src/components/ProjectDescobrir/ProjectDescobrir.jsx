@@ -1,22 +1,23 @@
 import imgProjeto from "../../images/img_projeto.png";
-import EditIcon from "../EditIcon/EditIcon";
+import AvatarIcon from "../AvatarIcon/AvatarIcon";
 import Tag from "../Tag/Tag";
-import UserInfo from "../UserInfo/UserInfo";
-import "./Project.css";
+import "../Project/Project.css"
+import "./ProjectDescobrir.css"
 
-// eslint-disable-next-line react/prop-types
-function Project({ setOpenModalEdit, setOpenModalDelete }) {
+function ProjectDescobrir() {
     return (
         <div className="project-container">
-            <div className="edit-icon-container">
-                <EditIcon setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
-            </div>
             <div className="project-image-div">
                 <img src={imgProjeto} />
             </div>
             <div className="description-section">
                 <div className="user-infos-container">
-                    <UserInfo />
+                    <div className="user-infos">
+                        <AvatarIcon />
+                        <div className="div-text-info">
+                            <p>Camila Soares . 12/23</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="tag-container">
                     <Tag label="UX" />
@@ -27,4 +28,4 @@ function Project({ setOpenModalEdit, setOpenModalDelete }) {
     );
 }
 
-export default Project;
+export default ProjectDescobrir;

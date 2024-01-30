@@ -47,6 +47,9 @@ function MyPortfolio() {
                 <div className="project-section">
                     <AddFirst label="Adicione seu primeiro projeto" onClick={setOpenModal} />
                     <Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
+                    <Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
+                    <Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
+                    <Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
                 </div>
             </div>
         </div>
