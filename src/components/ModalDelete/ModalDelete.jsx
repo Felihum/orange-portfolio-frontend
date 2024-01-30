@@ -10,7 +10,7 @@ function ModalDelete({ isOpen, setOpenModalDelete }) {
                         <div className="title-div">
                             <h1>Deseja Excluir?</h1>
                         </div>
-                        <div className="paragraph-div">
+                        <div className="paragraph-delete-div">
                             <p>Se você prosseguir irá excluir o projeto do seu portfólio</p>
                         </div>
                         <div className="button-div">

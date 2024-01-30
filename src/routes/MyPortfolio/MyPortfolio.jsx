@@ -1,14 +1,14 @@
-import AddFirst from "../components/AddFirst/AddFirst";
-import AvatarIcon from "../components/AvatarIcon/AvatarIcon";
+import AddFirst from "../../components/AddFirst/AddFirst";
+import AvatarIcon from "../../components/AvatarIcon/AvatarIcon";
 //import ButtonAdd from "../components/ButtonAdd/ButtonAdd"
-import NavBar from "../components/NavBar/NavBar"
-import SearchBar from "../components/SearchBar/SearchBar";
+import NavBar from "../../components/NavBar/NavBar"
+import SearchBar from "../../components/SearchBar/SearchBar";
 import "./MyPortfolio.css"
 import { useState } from "react";
-import ModalAddProjeto from "../components/ModalAddProjeto/ModalAddProjeto";
-import ModalDelete from "../components/ModalDelete/ModalDelete";
-import Project from "../components/Project/Project";
-import ModalEdit from "../components/ModalEdit/ModalEdit";
+import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
+import ModalDelete from "../../components/ModalDelete/ModalDelete";
+import Project from "../../components/Project/Project";
+import ModalEdit from "../../components/ModalEdit/ModalEdit";
 
 function MyPortfolio() {
 

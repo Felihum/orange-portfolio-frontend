@@ -44,12 +44,12 @@
     line-height: 24px; /* 100% */
 }
 
-.paragraph-div{
+.paragraph-delete-div{
     width: 337px;
     flex-shrink: 0;
 }
 
-.paragraph-div p{
+.paragraph-delete-div p{
     color: var(--Neutral-Colors-Neutral-110, var(--Neutral-Colors-Neutral-110, #515255));
     /* [Orange P] Style Guide/Body 1 */
     font-family: Roboto;

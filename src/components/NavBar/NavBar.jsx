@@ -18,10 +18,10 @@ function NavBar() {
                     </div>
                     <div className="paragraph-container">
                         <div className="btn-meus-projetos">
-                            <Link to="#" className="paragraph">Meus Projetos</Link>
+                            <Link to="/meus-projetos" className="paragraph">Meus Projetos</Link>
                         </div>
                         <div className="btn-descobrir">
-                            <Link to="#" className="paragraph">Descobrir</Link>
+                            <Link to="/descobrir" className="paragraph">Descobrir</Link>
                         </div>
                     </div>
                 </div>

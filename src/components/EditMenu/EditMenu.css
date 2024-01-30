@@ -66,6 +66,9 @@
 }
 
 .btn-excluir button{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
     gap: var(--1, 8px);
     padding: var(--1, 8px) var(--3, 24px);
     color: var(--Neutral-Colors-Neutral-110, var(--Neutral-Colors-Neutral-110, #515255));
