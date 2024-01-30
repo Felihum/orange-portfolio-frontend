@@ -122,7 +122,7 @@ input{
 
 @media(min-width:1280px){
     .mainContainer{
-        background-color: red;
+        background-color: rgb(165, 165, 255);
         display: flex;
         height: 100vh;
     }

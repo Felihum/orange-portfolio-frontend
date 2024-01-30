@@ -3,6 +3,7 @@ import Cad from "./routes/Cad/Cad"
 import MyPortfolio from './routes/MyPortfolio/MyPortfolio'
 import LoginTeste from "./routes/LoginTeste/LoginTeste"
 import CadTeste from "./routes/CadTeste/CadTeste"
+import MyPortFouth from "./routes/MyPortFourth/MyPortFourth"
 // import AddedPost from "./components/AddedPost/AddedPost"
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       {/* <MyPortfolio></MyPortfolio> */}
       {/* <LoginTeste></LoginTeste> */}
       {/* <AddedPost></AddedPost> */}
-      <CadTeste></CadTeste>
+      {/* <CadTeste></CadTeste> */}
+      <MyPortFouth></MyPortFouth>
     </div>
   )
 }

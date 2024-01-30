@@ -206,9 +206,12 @@
     }
     .inputTextNameSurname{
         display: flex;
+        background-color: greenyellow;
+        width: 100%;
     }
 
     .inputTextNameSurname > .textFieldLogin{
         flex: 1;
+        background-color: yellow;
     }
 }

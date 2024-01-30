@@ -60,10 +60,11 @@ export default function Login(){
           <div className="containerImgLogin">
             <img src={ImageLogin}  className="imgLogin" />
           </div>
+          
+          <div className='login-form-wrap'>
           <div className="containerTit">
               <p className="tit1Login">Entre no Orange Portifólio</p>
             </div>
-          <div className='login-form-wrap'>
             <GoogleBtn></GoogleBtn>
             <p className="tit2login">Faça login com email</p>
             <br></br>
