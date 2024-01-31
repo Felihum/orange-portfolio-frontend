@@ -1,4 +1,5 @@
 .add-file-container{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     width: 389px;
@@ -59,6 +60,33 @@
 
 .text-compartilhe-container{
     width: 270px;
+}
+
+.thumbsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.thumb{
+    display: inline-flex;
+    border-radius: 4px;
+    width: 390px;
+    height: 307px;
+}
+
+.thumbInner{
+    display: flex;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.img-thumb{
+    display: block;
+    width: auto;
+    height: 100%;
 }
 
 @media screen and (max-width: 360px){
