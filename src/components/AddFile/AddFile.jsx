@@ -5,7 +5,6 @@ import "./AddFile.css"
 function AddFile() {
     return (
         <div className="add-file-container">
-            <input className="input-img" type="file" />
             <CollectionIcon />
             <div className="text-container">
                 <div className="text-compartilhe-container">

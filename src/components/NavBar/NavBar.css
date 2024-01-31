@@ -134,3 +134,23 @@
         justify-content: center;
     }
 }
+
+@media screen and (max-width: 360px){
+    .header{
+        width: 712px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 9px;
+    }
+    
+    .paragraph-container{
+        display: none;
+    }
+    
+    .burger-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

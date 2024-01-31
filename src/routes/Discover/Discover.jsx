@@ -2,12 +2,17 @@ import NavBar from "../../components/NavBar/NavBar";
 import { TextField } from "@mui/material";
 import "./Discover.css"
 import ProjectDescobrir from "../../components/ProjectDescobrir/ProjectDescobrir";
+import { useState } from "react";
+import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
 
 function Discover() {
+
+    const[openModalVisual, setOpenModalVisual] = useState(false)
+
     return (
         <div>
             <div className="modal-section">
-            
+                <ModalAddProjeto isOpen={openModalVisual} />
             </div>
             <NavBar />
             <div className="div-geral">
@@ -20,7 +25,7 @@ function Discover() {
                     <TextField className="search-tag" label="Buscar tags" variant="outlined" />
                 </div>
                 <div className="project-section">
-                    <ProjectDescobrir />
+                    <ProjectDescobrir setOpenModalVisual={setOpenModalVisual} />
                 </div>
             </div>
             

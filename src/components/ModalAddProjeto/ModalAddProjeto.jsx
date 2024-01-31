@@ -43,7 +43,7 @@ function ModalAddProjeto({ isOpen, setModalOpen}) {
                                 </div>
                                 <div className="div-button">
                                     <div className="btn-salvar">
-                                        <button>Salvar</button>
+                                        <button type="submit">Salvar</button>
                                     </div>
                                     <div className="btn-cancelar">
                                         <button onClick={setModalOpen}>Cancelar</button>

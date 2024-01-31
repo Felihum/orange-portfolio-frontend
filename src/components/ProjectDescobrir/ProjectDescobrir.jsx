@@ -4,9 +4,11 @@ import Tag from "../Tag/Tag";
 import "../Project/Project.css"
 import "./ProjectDescobrir.css"
 
-function ProjectDescobrir() {
+// eslint-disable-next-line react/prop-types
+function ProjectDescobrir({ setOpenModalVisual }) {
+
     return (
-        <div className="project-container">
+        <div className="project-container" onClick={() => setOpenModalVisual(true)}>
             <div className="project-image-div">
                 <img src={imgProjeto} />
             </div>

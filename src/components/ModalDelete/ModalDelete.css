@@ -23,7 +23,7 @@
     background: var(--Neutral-Colors-Neutral-60, #FCFDFF);
 }
 
-.content-session{
+.content-section{
     display: flex;
     flex-direction: column;
     gap: var(--4, 32px) var(--2, 16px);
@@ -120,4 +120,34 @@
     line-height: 26px; /* 173.333% */
     letter-spacing: 0.46px;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 360px) {
+    .delete-modal-div{
+        display: flex;
+        width: 312px;
+        padding: var(--3, 24px);
+        
+        align-items: flex-end;
+        align-content: flex-end;
+        gap: var(--3, 24px) var(--2, 16px);
+        
+        flex-wrap: wrap;
+    }
+
+    .paragraph-delete-div{
+        width: 288px;
+        flex-shrink: 0;
+    }
+
+    .paragraph-delete-div p{
+        color: var(--Neutral-Colors-Neutral-110, var(--Neutral-Colors-Neutral-110, #515255));
+        /* [Orange P] Style Guide/Body 1 */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 100% */
+        letter-spacing: 0.5px;
+    }
 }
