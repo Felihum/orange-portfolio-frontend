@@ -72,20 +72,25 @@
 
 .thumb{
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 4px;
-    width: 390px;
-    height: 307px;
+    width: 389px;
+    height: 304px;
 }
 
 .thumbInner{
     display: flex;
+    justify-content: center;
+    align-items: center;
     min-width: 0;
     overflow: hidden;
+    height: 100%;
 }
 
 .img-thumb{
     display: block;
-    width: auto;
+    width: 100%;
     height: 100%;
 }
 
@@ -97,5 +102,20 @@
 
     .text-container{
         width: 249px;
+    }
+
+    .thumbsContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 266px;
+    }
+    
+    .img-thumb{
+        display: block;
+        width: 266px;
+        height: 304px;
     }
 }

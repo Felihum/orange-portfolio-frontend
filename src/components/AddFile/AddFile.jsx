@@ -5,7 +5,7 @@ import { useDropzone } from "react-dropzone";
 import { useEffect } from "react";
 
 // eslint-disable-next-line react/prop-types
-function AddFile(props) {
+function AddFile() {
 
     const [files, setFiles] = useState([]);
 
@@ -36,23 +36,37 @@ function AddFile(props) {
     useEffect(() => {
         return () => files.forEach(file => URL.revokeObjectURL(file.preview));
     }, []);
-
-    return (
-        <section>
-            <div {...getRootProps({className: "add-file-container"})}>
-                <input {...getInputProps()} />
-                <CollectionIcon />
-                <div className="thumbsContainer">
-                    {thumbs}
-                </div>
-                <div className="text-container">
-                    <div className="text-compartilhe-container">
-                        <p className="text-compartilhe">Compartilhe seu talento com milhares de pessoas</p>
+        
+    if(files.length != 0){
+        return(
+            <section>
+                <div {...getRootProps({className: "add-file-container"})}>
+                    <input {...getInputProps()} />
+                    <div className="thumbs-container">
+                        {
+                            thumbs
+                        }
                     </div>
                 </div>
-            </div>
-        </section>
-    );
+            </section>
+        )
+    } else{
+        return (
+            <section>
+                <div {...getRootProps({className: "add-file-container"})}>
+                    <input {...getInputProps()} />
+                    <CollectionIcon />
+                    <div className="text-container">
+                        <div className="text-compartilhe-container">
+                            <p className="text-compartilhe">Compartilhe seu talento com milhares de pessoas</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
+    
 }
 
 export default AddFile;
