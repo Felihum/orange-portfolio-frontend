@@ -7,7 +7,7 @@ function UserInfo() {
         <div className="user-infos">
             <AvatarIcon />
             <div className="div-text-info">
-                <p>Camila Soares</p>
+                <p className="name-paragraph">Camila Soares</p>
                 <p className="point-icon"><TbPointFilled /></p>
                 <p>12/23</p>
             </div>

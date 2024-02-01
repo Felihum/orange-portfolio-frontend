@@ -7,14 +7,32 @@ import "./MyPortfolio.css"
 import { useState } from "react";
 import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
 import ModalDelete from "../../components/ModalDelete/ModalDelete";
-import Project from "../../components/Project/Project";
 import ModalEdit from "../../components/ModalEdit/ModalEdit";
+import ModalNotification from "../../components/ModalNotification/ModalNotification";
+import ProjectList from "../../components/ProjectList/ProjectList";
+import imgProjeto from "../../images/img_projeto.png"
 
 function MyPortfolio() {
+
+    const projetos = [
+        {
+            image: imgProjeto, 
+            title: "Projeto Teste", 
+            tags: "WEB", link: "#", 
+            description: "Descrição do projeto de teste"
+        }, 
+        {
+            image: imgProjeto, 
+            title: "Projeto Teste", 
+            tags: "UX", link: "#", 
+            description: "Descrição do projeto de teste"
+        }
+    ];
 
     const [openModalEdit, setOpenModalEdit] = useState(false);
     const [openModalDelete, setOpenModalDelete] = useState(false);
     const [openModal, setOpenModal] = useState(false);
+    const [openModalNotification, setOpenModalNotification] = useState(false);
 
     return (
         <div>
@@ -22,9 +40,10 @@ function MyPortfolio() {
                 <ModalAddProjeto isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)} />
                 <ModalDelete isOpen={openModalDelete} setOpenModalDelete={setOpenModalDelete} />
                 <ModalEdit isOpen={openModalEdit} setModalEditOpen={setOpenModalEdit} />
+                <ModalNotification isOpen={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
             </div>
             <div className="desktop-version">
-                <NavBar />
+                <NavBar openModalNotification={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
                 <div className="card-section">
                     <div className="container-card">
                         <div className="avatar-image-card">
@@ -45,11 +64,15 @@ function MyPortfolio() {
                     <SearchBar />
                 </div>
                 <div className="project-section">
-                    <AddFirst label="Adicione seu primeiro projeto" onClick={setOpenModal} />
-                    <Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
-                    <Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
-                    <Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
-                    <Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
+                    {
+                        projetos.length != 0 ?
+                            <ProjectList setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} projetos={projetos} />
+                        :
+                            <AddFirst label="Adicione seu primeiro projeto" onClick={setOpenModal} />
+                    }
+                    
+                    {/*<Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />*/}
+                    
                 </div>
             </div>
         </div>
