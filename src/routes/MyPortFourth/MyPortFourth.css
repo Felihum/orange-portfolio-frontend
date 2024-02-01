@@ -3,64 +3,201 @@ body {
     height: 100;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
+    background-color: white;
 }
 
 
-.backGroundDiv{
-    background-color: black;
-    height: 100%;
+@media(max-width: 360px){
+    .backGroundDiv{
+        background-color: #303133;
+        height: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mainProjectContainer{
+        background-color: white;
+        width: 360px;
+        height: 100vh;
+        border-radius: 24px 24px 0px 0px;
+        margin-top: 148px;
+        /* text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center; */
+        
+    }
+    
+    .titProjectUser{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .titProjectUser > p{
+        color: var(--Neutral-Colors-Neutral-120, #303133);
+        text-align: center;
+    
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 56px 0px 32px 0px;
+    }
+    
+    .imgProjectUser{
+        width: 312px;
+        height: 258px;
+        flex-shrink: 0;
+        margin: 0px 24px 0px 24px;
+        justify-content: space-around;
+        /* flex-shrink: 0; */
+    }
+    
+    
+    .userDataProject{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        margin: 8px 24px 0px 24px;
+        background-color: blue;
+        justify-content: space-between;
+        /* align-self: flex-start; */
+    }
+
+    .userDataAvatarNameDate{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    /* .userNameProject,
+    .dataDayUser {
+        margin-left: auto;  
+    } */
+    
+    .userDetailsProject{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    
+    .descripitionUserProject{
+        margin: 16px 24px 16px 24px;
+        text-align: start;
+    }
+    
+    .userDownloadProject {
+        margin: 0px 24px 0px 24px;
+        text-align: start;
+        overflow: hidden;
+        width: 388px;
+    }
+    
+    .userLinkProject{
+        color: red;
+        display: flex;
+        width: 75%;
+        justify-content: flex-start;
+    }
+    .linkProjectTag{
+        word-wrap: break-word;
+        width: 100%;
+    }
+    .userTagsProject{
+        display: flex;
+        background-color: red;
+    }
 }
 
-.mainProjectContainer{
-    background-color: aquamarine;
-    height: 100vh;
-    border-radius: 24px 24px 0px 0px;
-    margin-top: 148px;
-}
-
-.titProjectUser{
-    width: 100%;
-    text-align: center;
-}
-
-.titProjectUser > p{
-    color: var(--Neutral-Colors-Neutral-120, #303133);
-    text-align: center;
-
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    margin: 56px 0px 32px 0px;
-}
-
-.imgProjectUser{
-    width: 312px;
-    height: 258px;
-    flex-shrink: 0;
-    margin: 0px 24px 0px 24px;
-}
-
-
-.userDataProject{
-    display: flex;
-    margin: 0px 24px 0px 24px;
-}
-
-.userNameProject{
-    display: block;
-}
-
-.dataDayUser{
-    display: block;
-}
-
-.descripitionUserProject{
-    margin: 16px 24px 16px 24px;
-}
-
-.userDownloadProject{
-    margin: 0px 24px 0px 24px;
-    overflow: auto;
+@media(min-width: 1280px){
+    .backGroundDiv{
+        background-color: #303133;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mainProjectContainer{
+        background-color: white;
+        width: 1042px;
+        height: 980.82px;
+        margin-top: 134px;
+        /* text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center; */
+        
+    }
+    
+    .titProjectUser{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .titProjectUser > p{
+        color: var(--Neutral-Colors-Neutral-120, #303133);
+        text-align: center;
+    
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 56px 0px 32px 0px;
+    }
+    
+    .imgProjectUser{
+        width: 838px;
+        height: 258px;
+        flex-shrink: 0;
+        margin: 0px 24px 0px 24px;
+        /* flex-shrink: 0; */
+    }
+    
+    
+    .userDataProject{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        margin: 8px 24px 0px 24px;
+        /* align-self: flex-start; */
+    }
+    
+    /* .userNameProject,
+    .dataDayUser {
+        margin-left: auto;  
+    } */
+    
+    .userDetailsProject{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    
+    .descripitionUserProject{
+        margin: 16px 24px 16px 24px;
+        text-align: start;
+    }
+    
+    .userDownloadProject {
+        margin: 0px 24px 0px 24px;
+        text-align: start;
+        overflow: hidden;
+        width: 388px;
+    }
+    
+    .userLinkProject{
+        color: red;
+        display: flex;
+        width: 75%;
+        justify-content: flex-start;
+    }
+    .linkProjectTag{
+        word-wrap: break-word;
+        width: 100%;
+    }
 }

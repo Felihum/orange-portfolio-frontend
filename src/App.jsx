@@ -4,6 +4,8 @@ import MyPortfolio from './routes/MyPortfolio/MyPortfolio'
 import LoginTeste from "./routes/LoginTeste/LoginTeste"
 import CadTeste from "./routes/CadTeste/CadTeste"
 import MyPortFouth from "./routes/MyPortFourth/MyPortFourth"
+import UserDetails from "./components/UserDetails/UserDetails"
+import SelectNacionality from "./components/SelectNacionality/SelectNacionality"
 // import AddedPost from "./components/AddedPost/AddedPost"
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
       {/* <AddedPost></AddedPost> */}
       {/* <CadTeste></CadTeste> */}
       <MyPortFouth></MyPortFouth>
+      {/* <UserDetails></UserDetails> */}
+      {/* <SelectNacionality></SelectNacionality> */}
     </div>
   )
 }

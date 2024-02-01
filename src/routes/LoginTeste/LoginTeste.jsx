@@ -15,7 +15,7 @@ export default function LoginTeste(){
 
 
             <div className="imgLogin">
-                <img src={imageLogin}></img>
+                <img src={imageLogin} id="imgLoginTagCad"></img>
             </div>
 
 

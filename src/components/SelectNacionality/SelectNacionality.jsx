@@ -5,24 +5,28 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import './SelectNacionality.css'
-const URL = "https://servicodados.ibge.gov.br/api/v1/paises/indicadores/{indicadores}"
+const URL = "https://servicodados.ibge.gov.br/api/v1/paises/{paises}"
 
 export default function SelectNacionality(props){
     const [data,setData] = useState([])
     const [selectedValue,setSelectedValue] = useState('')
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try{
-                const response = await fetch(URL)
-                const result = await response.json()
-                setData(result)
-            }catch(error){
-                console('Erro ao buscar dados da API',error)
-            }
-        }
-        fetchData()
-    },[])
+  //   const fetchData = async () => {
+  //     try{
+  //         const response = await fetch(URL)
+  //         const result = await response.json()
+  //         setData(result)
+  //     }catch(error){
+  //         console('Erro ao buscar dados da API',error)
+  //     }
+  // }
+
+  //   useEffect(() => {
+  //     fetchData()
+  //   },[])
+
+  
+
     const handleChange = (event) => {
         selectdValue(event.target.value)
     }
@@ -34,9 +38,12 @@ export default function SelectNacionality(props){
           value={selectedValue}
           onChange={handleChange}
         >
-          {data.map(item => (
-            <MenuItem key={item.id} value={item.valor}>{item.nome}</MenuItem>
-          ))}
+          {data.forEach(d => {
+            console.log(d)
+          })}
+          {/* {data.map(item => (
+            <MenuItem key={item.id} value={item.valor}>{item.nome.abreviado}</MenuItem>
+          ))} */}
         </Select>
       </FormControl>
     </div>

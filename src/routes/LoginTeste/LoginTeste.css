@@ -124,6 +124,7 @@
 
 @media (max-width: 500px){
     .containerLoginTag{
+        display: flex;
         /* justify-content: center; */
         align-items: center;
         padding: 45px 109px;
@@ -132,6 +133,7 @@
         /* background-color: #F52; */
         /* background-color: greenyellow; */
     }
+
 
     .loginCard{
         width: 312px;
@@ -194,14 +196,26 @@
 @media(min-width: 1280px){
     .containerLoginTag{
         display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: center;
     }
+    
     .imgLogin{
-        flex: 1;
+        width: 10%;
+        /* flex: 1; */
         display: block;
         box-sizing: border-box;
     }
+
+    #imgLoginTagCad{
+        width: 100px;
+    }
     .loginCard{
-        flex: 1;
+        /* width: 50%; */
+        width: 100px;
+        height: 100px;
+        /* flex: 1; */
         box-sizing: border-box;
     }
 }
