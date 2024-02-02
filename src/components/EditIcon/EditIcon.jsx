@@ -10,10 +10,10 @@ function EditIcon({ setOpenModalEdit, setOpenModalDelete }) {
     return (
         <div className="edit-icon-div">
             <div className="div-inside">
-                <button onClick={() => setOpenMenu(!openMenu)}><img src={editIcon}/></button>
+                <button onClick={() => setOpenMenu(!openMenu)} onMouseOut={() => setOpenMenu(false)} onMouseOver={() => setOpenMenu(true)}><img src={editIcon}/></button>
             </div>
             <div className="div-modal">
-                <EditMenu setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} isOpen={openMenu}/>
+                <EditMenu setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} isOpen={openMenu} setOpenMenu={setOpenMenu}/>
             </div>
         </div>
     );

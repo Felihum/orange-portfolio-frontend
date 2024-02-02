@@ -208,11 +208,20 @@
     .modal-card{
         margin-top: 148px;
         width: 312px;
-        height: 859px;
-        padding: 21px 25px;
+        height: 858px;
+        padding: 25px 25px;
         background-color: white;
         overflow-y: auto;
         overflow-x: hidden;
+    }
+
+    .button-container{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+        margin-top: 10px;
     }
     
     .input-form-container{

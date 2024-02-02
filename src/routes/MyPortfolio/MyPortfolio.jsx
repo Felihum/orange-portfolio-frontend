@@ -5,16 +5,39 @@ import NavBar from "../../components/NavBar/NavBar"
 import SearchBar from "../../components/SearchBar/SearchBar";
 import "./MyPortfolio.css"
 import { useState } from "react";
-import ModalAddProjeto from "../components/ModalAddProjeto/ModalAddProjeto";
-import ModalDelete from "../components/ModalDelete/ModalDelete";
-import Project from "../components/Project/Project";
-import ModalEdit from "../components/ModalEdit/ModalEdit";
+import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
+import ModalDelete from "../../components/ModalDelete/ModalDelete";
+import ModalEdit from "../../components/ModalEdit/ModalEdit";
+import ModalNotification from "../../components/ModalNotification/ModalNotification";
+import ProjectList from "../../components/ProjectList/ProjectList";
+import imgProjeto from "../../images/img_projeto.png"
 
 function MyPortfolio() {
+
+    const projetos = [
+        {
+            image: imgProjeto, 
+            title: "Projeto Teste", 
+            tags: "WEB", link: "#", 
+            description: "Descrição do projeto de teste"
+        }, 
+        {
+            image: imgProjeto, 
+            title: "Projeto Teste", 
+            tags: "UX", link: "#", 
+            description: "Descrição do projeto de teste"
+        }
+    ];
+
+    const [search, setSearch] = useState('');
+    const lowerSearch = search.toLowerCase();
+
+    const projetosFiltrados = projetos.filter((projeto) => projeto.tags.toLowerCase().includes(lowerSearch));
 
     const [openModalEdit, setOpenModalEdit] = useState(false);
     const [openModalDelete, setOpenModalDelete] = useState(false);
     const [openModal, setOpenModal] = useState(false);
+    const [openModalNotification, setOpenModalNotification] = useState(false);
 
     return (
         <div>
@@ -22,9 +45,10 @@ function MyPortfolio() {
                 <ModalAddProjeto isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)} />
                 <ModalDelete isOpen={openModalDelete} setOpenModalDelete={setOpenModalDelete} />
                 <ModalEdit isOpen={openModalEdit} setModalEditOpen={setOpenModalEdit} />
+                <ModalNotification isOpen={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
             </div>
             <div className="desktop-version">
-                <NavBar />
+                <NavBar openModalNotification={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
                 <div className="card-section">
                     <div className="container-card">
                         <div className="avatar-image-card">
@@ -42,11 +66,21 @@ function MyPortfolio() {
                     </div>
                 </div>
                 <div className="search-section">
-                    <SearchBar />
+                    <SearchBar setSearch={setSearch} />
                 </div>
                 <div className="project-section">
-                    <AddFirst label="Adicione seu primeiro projeto" onClick={setOpenModal} />
-                    <Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
+                    {
+                        projetos.length != 0 ?
+                            projetosFiltrados.length != 0?
+                                <ProjectList setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} projetos={projetosFiltrados} />
+                            :
+                                <p>Nao existe</p>
+                        :
+                            <AddFirst label="Adicione seu primeiro projeto" onClick={setOpenModal} />
+                    }
+                    
+                    {/*<Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />*/}
+                    
                 </div>
             </div>
         </div>

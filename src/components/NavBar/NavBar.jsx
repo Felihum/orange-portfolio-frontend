@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import "./NavBar.css"
 import NotificationIcon from "../NotificationIcon/NotificationIcon";
 
-function NavBar() {
+// eslint-disable-next-line react/prop-types
+function NavBar({ openModalNotification, setOpenModalNotification }) {
     return (
         <div className='menu'>
             <div className="rading-container">
@@ -18,10 +19,10 @@ function NavBar() {
                     </div>
                     <div className="paragraph-container">
                         <div className="btn-meus-projetos">
-                            <Link to="#" className="paragraph">Meus Projetos</Link>
+                            <Link to="/meus-projetos" className="paragraph">Meus Projetos</Link>
                         </div>
                         <div className="btn-descobrir">
-                            <Link to="#" className="paragraph">Descobrir</Link>
+                            <Link to="/descobrir" className="paragraph">Descobrir</Link>
                         </div>
                     </div>
                 </div>
@@ -30,7 +31,7 @@ function NavBar() {
                         <AvatarIcon />
                     </div>
                     <div>
-                        <NotificationIcon />
+                        <NotificationIcon openModalNotification={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
                     </div>
                 </div>
             </div>

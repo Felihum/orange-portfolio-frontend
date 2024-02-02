@@ -33,7 +33,7 @@ function ModalAddProjeto({ isOpen, setModalOpen}) {
                                         <TextField className="input-item" label="Link" variant="outlined" />
                                     </div>
                                     <div className="input-descricao">
-                                        <TextField className="input-descricao-item" label="Descrição" variant="outlined" />
+                                        <TextField className="input-descricao-item" multiline rows={4} label="Descrição" variant="outlined" />
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ function ModalAddProjeto({ isOpen, setModalOpen}) {
                                 </div>
                                 <div className="div-button">
                                     <div className="btn-salvar">
-                                        <button>Salvar</button>
+                                        <button type="submit">Salvar</button>
                                     </div>
                                     <div className="btn-cancelar">
                                         <button onClick={setModalOpen}>Cancelar</button>
