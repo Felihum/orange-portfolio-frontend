@@ -33,7 +33,7 @@ function ModalEdit({ isOpen, setModalEditOpen }) {
                                         <TextField className="input-item" label="Link" variant="outlined" />
                                     </div>
                                     <div className="input-descricao">
-                                        <TextField className="input-descricao-item" label="Descrição" variant="outlined" />
+                                        <TextField className="input-descricao-item" multiline rows={4} label="Descrição" variant="outlined" />
                                     </div>
                                 </div>
                             </div>

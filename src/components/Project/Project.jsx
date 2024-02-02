@@ -6,7 +6,7 @@ import "./Project.css";
 // eslint-disable-next-line react/prop-types
 function Project({ image, title, tag, link, description, setOpenModalEdit, setOpenModalDelete }) {
     return (
-        <div className="project-container">
+        <div className="project-container" defaultValue={tag}>
             <div className="edit-icon-container">
                 <EditIcon setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
             </div>

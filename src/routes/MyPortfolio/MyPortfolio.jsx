@@ -29,6 +29,11 @@ function MyPortfolio() {
         }
     ];
 
+    const [search, setSearch] = useState('');
+    const lowerSearch = search.toLowerCase();
+
+    const projetosFiltrados = projetos.filter((projeto) => projeto.tags.toLowerCase().includes(lowerSearch));
+
     const [openModalEdit, setOpenModalEdit] = useState(false);
     const [openModalDelete, setOpenModalDelete] = useState(false);
     const [openModal, setOpenModal] = useState(false);
@@ -61,12 +66,15 @@ function MyPortfolio() {
                     </div>
                 </div>
                 <div className="search-section">
-                    <SearchBar />
+                    <SearchBar setSearch={setSearch} />
                 </div>
                 <div className="project-section">
                     {
                         projetos.length != 0 ?
-                            <ProjectList setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} projetos={projetos} />
+                            projetosFiltrados.length != 0?
+                                <ProjectList setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} projetos={projetosFiltrados} />
+                            :
+                                <p>Nao existe</p>
                         :
                             <AddFirst label="Adicione seu primeiro projeto" onClick={setOpenModal} />
                     }
