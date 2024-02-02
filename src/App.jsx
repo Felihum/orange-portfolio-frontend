@@ -17,10 +17,10 @@ function App() {
       {/* <Login></Login> */}
       {/* <Cad></Cad> */}
       {/* <MyPortfolio></MyPortfolio> */}
-      {/* <LoginTeste></LoginTeste> */}
+      <LoginTeste></LoginTeste>
       {/* <AddedPost></AddedPost> */}
       {/* <CadTeste></CadTeste> */}
-      <MyPortFouth></MyPortFouth>
+      {/* <MyPortFouth></MyPortFouth> */}
       {/* <UserDetails></UserDetails> */}
       {/* <SelectNacionality></SelectNacionality> */}
 
