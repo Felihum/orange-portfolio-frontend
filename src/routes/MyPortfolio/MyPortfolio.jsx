@@ -6,7 +6,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import "./MyPortfolio.css"
 import { Skeleton } from "@mui/material";
 import { useState } from "react";
-import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
+import ModalAddProjeto from "../components/ModalAddProjeto/ModalAddProjeto";
 
 function MyPortfolio() {
 
