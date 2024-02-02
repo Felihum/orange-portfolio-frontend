@@ -11,19 +11,27 @@ export default function SelectNacionality(props){
     const [data,setData] = useState([])
     const [selectedValue,setSelectedValue] = useState('')
 
-  //   const fetchData = async () => {
-  //     try{
-  //         const response = await fetch(URL)
-  //         const result = await response.json()
-  //         setData(result)
-  //     }catch(error){
-  //         console('Erro ao buscar dados da API',error)
-  //     }
-  // }
+    const fetchData = async () => {
+      try{
+          const nD = []
+          const response = await fetch(URL)
+          const result = await response.json()
+          result.forEach(item => {
+            const exists = nD.some(existingItem => existingItem.id === item.id);
 
-  //   useEffect(() => {
-  //     fetchData()
-  //   },[])
+            if (!exists) {
+              nD.push(item);
+            }
+          })
+          setData(nD)
+      }catch(error){
+          console('Erro ao buscar dados da API',error)
+      }
+  }
+
+    useEffect(() => {
+      fetchData()
+    },[])
 
   
 
@@ -41,9 +49,9 @@ export default function SelectNacionality(props){
           {data.forEach(d => {
             console.log(d)
           })}
-          {/* {data.map(item => (
+          {data.map(item => (
             <MenuItem key={item.id} value={item.valor}>{item.nome.abreviado}</MenuItem>
-          ))} */}
+          ))}
         </Select>
       </FormControl>
     </div>

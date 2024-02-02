@@ -6,6 +6,7 @@ import CadTeste from "./routes/CadTeste/CadTeste"
 import MyPortFouth from "./routes/MyPortFourth/MyPortFourth"
 import UserDetails from "./components/UserDetails/UserDetails"
 import SelectNacionality from "./components/SelectNacionality/SelectNacionality"
+import TagsChip from "./components/TagsChip/TagsChip"
 // import AddedPost from "./components/AddedPost/AddedPost"
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <MyPortFouth></MyPortFouth>
       {/* <UserDetails></UserDetails> */}
       {/* <SelectNacionality></SelectNacionality> */}
+
     </div>
   )
 }

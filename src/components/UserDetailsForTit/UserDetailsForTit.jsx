@@ -1,26 +1,29 @@
 
 import AvatarIcon from "../../components/AvatarIcon/AvatarIcon"
 import TagsChip from "../TagsChip/TagsChip"
-import "./UserDetails.css"
+import "./UserDetailsForTit.css"
 
-export default function UserDetails(){
+export default function UserDetailsForTit(){
     return(
-        <div className="userDataProject">
+        <div className="userDataProjectU">
 
-            <div className="userDataAvatarNameDate">
+            <div className="userDataAvatarNameDateU">
                 <div>
                      <AvatarIcon></AvatarIcon>
                 </div>
-                <div className="userDetailsProject">
-                            <div className="userNameProject">
+                <div className="userDetailsProjectU">
+                            <div className="userNameProjectU">
                                 <p>Camila Soares</p>
                             </div>
-                            <div className="dataDayUser">
+                            <div className="dataDayUserU">
                                 <p>12/12</p>
                             </div>
                         </div>
                     </div>
-                    <div className="userTagsProject">
+                <div className='titProjectUserU'>
+                    <p>Ecomerce One Page</p>
+                </div>
+                    <div className="userTagsProjectU">
                         <TagsChip></TagsChip>
                 </div>
         </div>

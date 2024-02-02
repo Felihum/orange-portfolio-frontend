@@ -51,3 +51,9 @@
     display: flex;
     background-color: red;
 }
+
+@media (min-width: 1280px){
+    .userDataProject{
+        display: none;
+    }
+}
