@@ -1,0 +1,73 @@
+.userDataProjectU{
+    display: none;
+}
+@media (min-width: 1280px){
+    .userDataProjectU{
+        display: flex;
+    }
+    .userDataProjectU{
+        display: flex;
+        flex-direction: row;
+        width: 838px;
+        gap: 8px;
+        margin: auto;
+        justify-content: space-between;
+        /* align-self: flex-start; */
+    }
+    
+    .userDataAvatarNameDateU{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    /* .userNameProject,
+    .dataDayUser {
+        margin-left: auto;  
+    } */
+    
+    .userDetailsProjectU{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+
+    .titProjectUserU{
+    }
+
+    .titProjectUserU > p{
+        color: var(--Neutral-Colors-Neutral-120, #303133);
+        text-align: center;
+    
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+    }
+    
+    
+    .descripitionUserProjectU{
+        margin: 16px 24px 16px 24px;
+        text-align: start;
+    }
+    
+    .userDownloadProjectU {
+        margin: 0px 24px 0px 24px;
+        text-align: start;
+        overflow: hidden;
+        width: 388px;
+    }
+    
+    .userLinkProjectU{
+        display: flex;
+        width: 75%;
+        justify-content: flex-start;
+    }
+    .linkProjectTagU{
+        word-wrap: break-word;
+        width: 100%;
+    }
+    .userTagsProjectU{
+        display: flex;
+    }
+    
+}

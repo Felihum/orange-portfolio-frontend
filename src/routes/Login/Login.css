@@ -55,7 +55,7 @@ input{
 
 /* Media queries */
 
-@media(max-width: 3600px){
+@media(max-width: 600px){
     .login-form-wrap{
         /* position: relative;
         margin-top: 30%;
@@ -138,7 +138,7 @@ input{
         height: 100vh;
     }
     .imgLogin{
-        max-width: 525px;
+        width: 525px;
     }
     .login-form-wrap{
         width: 50%;

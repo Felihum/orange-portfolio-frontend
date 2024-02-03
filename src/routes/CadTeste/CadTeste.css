@@ -1,41 +1,44 @@
 @import "../../GeneralStyle/GeneralStyle.css";
 
 /* Independente de tamanho */
-.containerLoginTag{
+.containerLoginTag-final{
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: aqua;
 }
 
-.imgLogin{
+.imgLogin-final{
     display: none;
 }
 
-.containerLoginTag{
-    background-color: yellow;
-    height: 100vh;
-}
 
-.containerFormLogin{
-    background-color: rgb(247, 119, 119);
+.containerFormLogin-final{
     width: 100%;
 }
 
-.loginCard{
-    background-color: rgb(208, 175, 238);
+.loginCard-final{
+    /* background-color: rgb(208, 175, 238); */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.tit1Login{
-    background-color: red;
+.tit1Login-final{
+    text-align: center;
     width: 100%;
 }
 
-.tit2Login > p{
+.tit1Login-final > p {
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+    width: 100%;
+}
+
+.tit2Login-final > p{
     color: var(--color-neutral-110);
 
     /* [Orange P] Style Guide/Subtitle 1 */
@@ -48,23 +51,21 @@
     width: 100%;
 }
 
-.inputsLogin{
-    background-color: rgb(81, 81, 245);
-}
 
-.linksLogin{
+
+.linksLogin-final{
     display: flex;
     justify-content: space-between;
     width: 100%;
     /* background-color: red; */
 }
 
-.linksLogin > a{
+.linksLogin-final > a{
     text-decoration: none;
     color: var(--color-neutral-100)
 }
 
-.btnLaranja{
+.btnLaranja-final{
     color: #FCFDFF;
     border-radius: var(--borderRadius, 4px);
     background: var(--Color-Brand-Secundria-Secondary-100, #F52);
@@ -90,7 +91,7 @@
         /* body{
         height: 640px;
         } */
-    .containerLoginTag{
+    .containerLoginTag-final{
         /* justify-content: center; */
         align-items: center;
         padding: 45px 109px;
@@ -100,7 +101,8 @@
         /* background-color: greenyellow; */
     }
 
-    .loginCard{
+
+    .loginCard-final{
         width: 312px;
         gap: 32px;
         /* background-color: yellow; */
@@ -110,7 +112,7 @@
 
     }
 
-    .tit2Login{
+    .tit2Login-final{
         display: flex;
         height: var(--4, 32px);
         padding: var(--none, 0px);
@@ -124,6 +126,7 @@
 
 @media (max-width: 500px){
     .containerLoginTag{
+        display: flex;
         /* justify-content: center; */
         align-items: center;
         padding: 45px 109px;
@@ -132,6 +135,7 @@
         /* background-color: #F52; */
         /* background-color: greenyellow; */
     }
+
 
     .loginCard{
         width: 312px;
@@ -192,26 +196,68 @@
 
 
 @media(min-width: 1280px){
-    .containerLoginTag{
+    .containerLoginTag-final{
         display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background-color: rgb(34, 255, 144);
     }
-    .imgLogin{
+
+    .loginCard-final{
+        background-color: white;
+        flex: 1;
+    }
+    
+    .imgLogin-final{
+        background-color: blue;
+        display: block;
+        box-sizing: border-box;
+        flex: 1;
+    }
+
+    .imgLogin-final{
+        background: url("../../images/Login_Cad/img_Cad.png") ;
+        background-size: cover;
+        background-repeat: no-repeat;
         flex: 1;
         display: block;
         box-sizing: border-box;
     }
-    .loginCard{
-        flex: 1;
-        box-sizing: border-box;
-    }
-    .inputTextNameSurname{
-        display: flex;
-        background-color: greenyellow;
-        width: 100%;
+
+    .imgLoginTagCad-final{
     }
 
-    .inputTextNameSurname > .textFieldLogin{
+    .textFieldName-final{
+        background-color: white;
+        /* display: flex; */
+    }
+
+    .inputText{
+        background-color: pink;
         flex: 1;
-        background-color: yellow;
+    }
+
+    .tit1Login-final{
+        margin-bottom: 16px;
+    }
+
+    .containerFormLogin-final{
+        background-color: white;
+        width: 517px;
+        height: 271px;
+        margin-top: 16px;
+    }
+
+    #imgLoginTagCad-final{
+        width: 100px;
+    }
+    .loginCard-final{
+        /* width: 50%; */
+        /* width: 100px;
+        height: 100px; */
+        /* flex: 1; */
+        box-sizing: border-box;
     }
 }
