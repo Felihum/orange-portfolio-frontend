@@ -4,41 +4,41 @@ import { TextField } from "@mui/material";
 import InputPassword from "../../components/inputPassword/InputPass";
 import ButtonOrange from "../../components/ButtonOrange/ButtonOrange"
 import InputText from "../../components/inputText/InputText";
-import "./LoginTeste.css"
 import imageLogin from "../../images/Login_Cad/img_login-0.png"
-
+import ImgTest from "../../images/ImageFull.png"
+import "./LoginTeste.css"
 
 
 export default function LoginTeste(){
     return(
-        <div className="containerLoginTag">
+        <div className="containerLoginTagFinal">
 
 
-            <div className="imgLogin">
-                <img src={imageLogin} id="imgLoginTagCad"></img>
+            <div className="imgLoginFinal">
+                
             </div>
 
 
-            <div className="loginCard">
+            <div className="loginCardFinal">
 
 
-                <div className="tit1Login">
+                <div className="tit1LoginFinal">
                     <p>Entre no Orange Portifólio</p>
                 </div>
 
 
                 <GoogleBtn></GoogleBtn>
-                <div className="containerFormLogin">
+                <div className="containerFormLoginFinal">
 
 
-                    <div className="tit2Login">
+                    <div className="tit2LoginFinal">
                         <p>Faça seu login com email</p>
                     </div>
 
 
-                    <div className="inputsLogin">
+                    <div className="inputsLoginFinal">
                         <InputText
-                        className="textFieldLogin"
+                        className="textFieldLoginFinal"
                         type="email"
                         name="email"
                         required
@@ -50,9 +50,9 @@ export default function LoginTeste(){
                     </div>
 
                                  
-                <div className="linksLogin">
+                <div className="linksLoginFinal">
                     <a href="#">Cadastre-se</a>
-                    <a href="#">Esqueci minha senha</a>
+                    {/* <a href="#">Esqueci minha senha</a> */}
                 </div>
                 </div>
             </div>

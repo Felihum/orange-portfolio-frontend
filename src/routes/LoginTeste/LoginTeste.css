@@ -1,28 +1,22 @@
 @import "../../GeneralStyle/GeneralStyle.css";
 
 /* Independente de tamanho */
-.containerLoginTag{
+.containerLoginTagFinal{
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: aqua;
 }
 
-.imgLogin{
+.imgLoginFinal{
     display: none;
 }
 
-.containerLoginTag{
-    /* background-color: yellow; */
-    /* height: 100vh; */
-}
 
-.containerFormLogin{
-    background-color: rgb(247, 119, 119);
+.containerFormLoginFinal{
     width: 100%;
 }
 
-.loginCard{
+.loginCardFinal{
     /* background-color: rgb(208, 175, 238); */
     display: flex;
     flex-direction: column;
@@ -30,12 +24,21 @@
     align-items: center;
 }
 
-.tit1Login{
-    /* background-color: red; */
+.tit1LoginFinal{
+    text-align: center;
     width: 100%;
 }
 
-.tit2Login > p{
+.tit1LoginFinal > p {
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+    width: 100%;
+}
+
+.tit2LoginFinal > p{
     color: var(--color-neutral-110);
 
     /* [Orange P] Style Guide/Subtitle 1 */
@@ -48,23 +51,21 @@
     width: 100%;
 }
 
-.inputsLogin{
-    background-color: rgb(81, 81, 245);
-}
 
-.linksLogin{
+
+.linksLoginFinal{
     display: flex;
     justify-content: space-between;
     width: 100%;
     /* background-color: red; */
 }
 
-.linksLogin > a{
+.linksLoginFinal > a{
     text-decoration: none;
     color: var(--color-neutral-100)
 }
 
-.btnLaranja{
+.btnLaranjaFinal{
     color: #FCFDFF;
     border-radius: var(--borderRadius, 4px);
     background: var(--Color-Brand-Secundria-Secondary-100, #F52);
@@ -90,7 +91,7 @@
         /* body{
         height: 640px;
         } */
-    .containerLoginTag{
+    .containerLoginTagFinal{
         /* justify-content: center; */
         align-items: center;
         padding: 45px 109px;
@@ -100,7 +101,8 @@
         /* background-color: greenyellow; */
     }
 
-    .loginCard{
+
+    .loginCardFinal{
         width: 312px;
         gap: 32px;
         /* background-color: yellow; */
@@ -110,7 +112,7 @@
 
     }
 
-    .tit2Login{
+    .tit2LoginFinal{
         display: flex;
         height: var(--4, 32px);
         padding: var(--none, 0px);
@@ -194,28 +196,56 @@
 
 
 @media(min-width: 1280px){
-    .containerLoginTag{
+    .containerLoginTagFinal{
         display: flex;
         flex-direction: row;
-        width: 90%;
+        width: 100%;
+        height: 100vh;
         justify-content: center;
+        /* background-color: rgb(34, 255, 144); */
+    }
+
+    .loginCardFinal{
+        /* background-color: yellow; */
+        flex: 1;
     }
     
-    .imgLogin{
-        width: 10%;
-        /* flex: 1; */
+    .imgLoginFinal{
+        background: url("../../images/Login_Cad/img_login-0.png") ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex: 1;
         display: block;
         box-sizing: border-box;
     }
 
-    #imgLoginTagCad{
+    #imgLoginTagCadFinal{
+        width: 500px;
+    }
+
+    .tit1LoginFinal{
+        margin-bottom: 16px;
+    }
+
+    .containerFormLoginFinal{
+        /* background-color: red; */
+        width: 517px;
+        height: 271px;
+        margin-top: 16px;
+    }
+
+    #imgLoginTagCadFinal{
         width: 100px;
     }
-    .loginCard{
+    .loginCardFinal{
         /* width: 50%; */
-        width: 100px;
-        height: 100px;
+        /* width: 100px;
+        height: 100px; */
         /* flex: 1; */
         box-sizing: border-box;
+    }
+
+    .inputsLoginFinal{
+        /* background-color: red; */
     }
 }

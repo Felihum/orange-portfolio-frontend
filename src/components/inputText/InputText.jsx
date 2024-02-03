@@ -6,7 +6,7 @@ import './inputText.css'
 const InputText = ({type, name, label, required, onChange, value,variant}) => {
   return(
     <Box sx={{mt:2}}>
-        <TextField type={type} name={name} label={label} required={required} variant={variant} onChange={onChange} value={value}className='inputText'></TextField>
+        <TextField type={type} name={name} label={label} required={required} variant={variant} onChange={onChange} value={value}className='inputTextFinal'></TextField>
     </Box>
   )
 }

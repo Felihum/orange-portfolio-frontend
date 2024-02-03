@@ -1,6 +1,6 @@
 @import "../../GeneralStyle/GeneralStyle.css";
 
-.inputText{
+.inputTextFinal{
     background-color: var(--cor-teste);
     width: 100%;
     color: var(--color--neutal-120);

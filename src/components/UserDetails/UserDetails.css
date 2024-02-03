@@ -3,7 +3,6 @@
     flex-direction: row;
     gap: 8px;
     margin: 8px 24px 0px 24px;
-    background-color: blue;
     justify-content: space-between;
     /* align-self: flex-start; */
 }
@@ -38,7 +37,6 @@
 }
 
 .userLinkProject{
-    color: red;
     display: flex;
     width: 75%;
     justify-content: flex-start;
@@ -49,7 +47,6 @@
 }
 .userTagsProject{
     display: flex;
-    background-color: red;
 }
 
 @media (min-width: 1280px){

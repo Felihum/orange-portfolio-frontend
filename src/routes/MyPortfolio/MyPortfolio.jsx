@@ -3,10 +3,11 @@ import AvatarIcon from "../../components/AvatarIcon/AvatarIcon";
 //import ButtonAdd from "../components/ButtonAdd/ButtonAdd"
 import NavBar from "../../components/NavBar/NavBar"
 import SearchBar from "../../components/SearchBar/SearchBar";
+import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
 import "./MyPortfolio.css"
 import { Skeleton } from "@mui/material";
 import { useState } from "react";
-import ModalAddProjeto from "../components/ModalAddProjeto/ModalAddProjeto";
+
 
 function MyPortfolio() {
 

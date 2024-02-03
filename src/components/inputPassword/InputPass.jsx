@@ -20,7 +20,7 @@ export default function InputAdornments() {
   return (
     <Box >
       <div>
-        <FormControl sx={{ mb: 2, mt:2}} variant="outlined" className='inputText'>
+        <FormControl sx={{ mb: 2, mt:2}} variant="outlined" className='inputTextFinal'>
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
             required
