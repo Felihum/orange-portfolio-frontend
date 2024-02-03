@@ -10,15 +10,15 @@ function App() {
 
   return (
     <div>
-      {/* <h1>Pagina Principal</h1> */}
-      {/* <Login></Login> */}
-      {/* <Cad></Cad> */}
-      {/* <MyPortfolio></MyPortfolio> */}
-      {/* <LoginTeste></LoginTeste> */}
-      {/* <AddedPost></AddedPost> */}
+      <h1>Pagina Principal</h1>
+      <Login></Login>
+      <Cad></Cad> 
+      <MyPortfolio></MyPortfolio>
+      {/*<LoginTeste></LoginTeste>*/}
+      {/*<AddedPost></AddedPost>*/}
       {/* <CadTeste></CadTeste> */}
-      <MyPortFouth></MyPortFouth>
-    </div>
+{/*       <MyPortFouth></MyPortFouth>
+ */}    </div>
   )
 }
 
