@@ -2,8 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import "./index.css"
+import "./GeneralStyle.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MyPortfolio from './routes/MyPortfolio/MyPortfolio.jsx';
+import MyPortfolio from './routes//MyPortfolio/MyPortfolio.jsx';
+import Discover from './routes/Discover/Discover.jsx';
+import { AuthProvider } from "./context/AuthContext.jsx"
+import Cad from './routes/Cad/Cad.jsx'
 
 const router = createBrowserRouter([
   {
@@ -11,13 +15,24 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
+    path: "/cadastro",
+    element: <Cad />
+  },
+  {
     path: "/meus-projetos",
     element: <MyPortfolio />
+  },
+  {
+    path: "/descobrir",
+    element: <Discover />
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  <AuthProvider>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </AuthProvider>,
+  
 )

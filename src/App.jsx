@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       {/* <h1>Pagina Principal</h1> */}
-      {/* <Login></Login> */}
+      <Login></Login> 
       {/* <Cad></Cad> */}
       <CadTeste></CadTeste>
       {/* <MyPortfolio></MyPortfolio> */}

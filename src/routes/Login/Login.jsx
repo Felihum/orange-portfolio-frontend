@@ -14,6 +14,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { login } from "../../scripts/Api/login";
 
 // export default function Login(){
 //   const [email,setEmail] = useState("")
@@ -53,8 +54,16 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 //     )
 // }
 
+function callLogin( email, password){
+  login( email, password)
+}
+
+
 
 export default function Login(){
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
     return(
         <div className="mainContainer">
           <div className="containerImgLogin">
@@ -74,13 +83,14 @@ export default function Login(){
               name="email" 
               required
               label="Endereço de email"
+              onChange={(e) => setEmail(e.target.value)}
               variant="outlined"
             ></TextField>
             <form className='login-form'>
-              <InputPassword></InputPassword>
-              <Button value="Entrar" classN="btnLaranja"></Button>
+              <InputPassword setPassword={setPassword}></InputPassword>
+              <Button value="Entrar" callLogin={callLogin} email={email} password={password}  classN="btnLaranja"></Button>
               <br/>
-              <a href="#">Cadastre-se</a>
+              <a href="/cadastro">Cadastre-se</a>
             </form>
           </div>
         </div>
