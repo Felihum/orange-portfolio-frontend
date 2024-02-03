@@ -1,21 +1,48 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import api from "../scripts/Api/api";
 
-const Context = createContext();
+const AuthContext = createContext();
 
 // eslint-disable-next-line react/prop-types
 function AuthProvider({ children }) {
 
     const [authenticated, setAuthenticated] = useState(false);
+    const [loading, setLoading] = useState(true);
 
-    async function handleLogin(){
-        const { data } = await api.post("/authenti")
+    useEffect(() => {
+        const token = localStorage.getItem('userToken')
+
+        if(token){
+            api.defaults.headers.Authorization = `Bearer ${JSON.parse(token)}`
+            setAuthenticated(true)
+        }
+
+        setLoading(false)
+    }, [])
+
+    async function login(email, password){
+        const { data: {token} } = await api.post("/auth/login", {
+            email,
+            password
+        })
+
+        localStorage.setItem("userToken", JSON.stringify(token));
+        api.defaults.headers.Authorization = `Bearer ${token}`
+        setAuthenticated(true)
+
+        return true;
+        
+    }
+
+    if(loading){
+        return <h1>Loading...</h1>
     }
 
     return (
-        <Context.Provider value={{ authenticated: false }}>
+        <AuthContext.Provider value={{ authenticated, login }}>
             {children}
-        </Context.Provider>
+        </AuthContext.Provider>
     );
 }
 
-export { Context, AuthProvider };
+export { AuthContext, AuthProvider };

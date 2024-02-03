@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import "./Login.css"
 import GoogleBtn from "../../components/GoogleButton/GogleBtn";
 import Button from "../../components/ButtonOrange/ButtonOrange";
@@ -14,7 +14,8 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { login } from "../../scripts/Api/login";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
 // export default function Login(){
 //   const [email,setEmail] = useState("")
@@ -54,15 +55,30 @@ import { login } from "../../scripts/Api/login";
 //     )
 // }
 
-function callLogin( email, password){
-  login( email, password)
-}
 
 
 
 export default function Login(){
+
+    const { login } = useContext(AuthContext)
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
+
+    async function callLogin(){
+      //const response = await login(email, password)
+
+      try {
+        await login(email, password)
+        navigate("/meus-projetos")
+      } catch (error) {
+        console.log(error)
+      }
+      
+     
+    }
+    
 
     return(
         <div className="mainContainer">
@@ -86,12 +102,12 @@ export default function Login(){
               onChange={(e) => setEmail(e.target.value)}
               variant="outlined"
             ></TextField>
-            <form className='login-form'>
-              <InputPassword setPassword={setPassword}></InputPassword>
-              <Button value="Entrar" callLogin={callLogin} email={email} password={password}  classN="btnLaranja"></Button>
-              <br/>
-              <a href="/cadastro">Cadastre-se</a>
-            </form>
+            
+            <InputPassword setPassword={setPassword}></InputPassword>
+            <Button value="Entrar" email={email} password={password} onClick={callLogin} classN="btnLaranja"></Button>
+            <br/>
+            <a href="/cadastro">Cadastre-se</a>
+            
           </div>
         </div>
     )

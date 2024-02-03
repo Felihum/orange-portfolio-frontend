@@ -4,7 +4,7 @@ import AvatarIcon from "../../components/AvatarIcon/AvatarIcon";
 import NavBar from "../../components/NavBar/NavBar"
 import SearchBar from "../../components/SearchBar/SearchBar";
 import "./MyPortfolio.css"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
 import ModalDelete from "../../components/ModalDelete/ModalDelete";
 import ModalEdit from "../../components/ModalEdit/ModalEdit";
