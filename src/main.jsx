@@ -7,11 +7,16 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MyPortfolio from './routes//MyPortfolio/MyPortfolio.jsx';
 import Discover from './routes/Discover/Discover.jsx';
 import { AuthProvider } from "./context/AuthContext.jsx"
+import Cad from './routes/Cad/Cad.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />
+  },
+  {
+    path: "/cadastro",
+    element: <Cad />
   },
   {
     path: "/meus-projetos",

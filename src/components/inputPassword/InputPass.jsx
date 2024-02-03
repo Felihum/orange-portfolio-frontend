@@ -8,7 +8,8 @@ import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
-export default function InputAdornments() {
+// eslint-disable-next-line react/prop-types
+export default function InputAdornments({ setPassword }) {
   const [showPassword, setShowPassword] = React.useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -38,6 +39,7 @@ export default function InputAdornments() {
                 </IconButton>
               </InputAdornment>
             }
+            onChange={(e) => setPassword(e.target.value)}
             label="Password"
           />
         </FormControl>

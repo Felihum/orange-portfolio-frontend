@@ -11,13 +11,13 @@ function App() {
   return (
     <div>
       {/* <h1>Pagina Principal</h1> */}
-      {/* <Login></Login> */}
+      <Login></Login> 
       {/* <Cad></Cad> */}
       {/* <MyPortfolio></MyPortfolio> */}
       {/* <LoginTeste></LoginTeste> */}
       {/* <AddedPost></AddedPost> */}
       {/* <CadTeste></CadTeste> */}
-      <MyPortFouth></MyPortFouth>
+      {/*<MyPortFouth></MyPortFouth>*/}
     </div>
   )
 }

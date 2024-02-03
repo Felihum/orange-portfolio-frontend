@@ -4,13 +4,14 @@ import AvatarIcon from "../../components/AvatarIcon/AvatarIcon";
 import NavBar from "../../components/NavBar/NavBar"
 import SearchBar from "../../components/SearchBar/SearchBar";
 import "./MyPortfolio.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
 import ModalDelete from "../../components/ModalDelete/ModalDelete";
 import ModalEdit from "../../components/ModalEdit/ModalEdit";
 import ModalNotification from "../../components/ModalNotification/ModalNotification";
 import ProjectList from "../../components/ProjectList/ProjectList";
 import imgProjeto from "../../images/img_projeto.png"
+import ModalBurger from "../../components/ModalBurger/ModalBurger";
 
 function MyPortfolio() {
 
@@ -39,6 +40,11 @@ function MyPortfolio() {
     const [openModal, setOpenModal] = useState(false);
     const [openModalNotification, setOpenModalNotification] = useState(false);
 
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <div>
             <div className="modal-section">
@@ -46,9 +52,10 @@ function MyPortfolio() {
                 <ModalDelete isOpen={openModalDelete} setOpenModalDelete={setOpenModalDelete} />
                 <ModalEdit isOpen={openModalEdit} setModalEditOpen={setOpenModalEdit} />
                 <ModalNotification isOpen={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
+                <ModalBurger show={show} handleClose={handleClose} />
             </div>
             <div className="desktop-version">
-                <NavBar openModalNotification={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
+                <NavBar handleShow={handleShow} openModalNotification={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
                 <div className="card-section">
                     <div className="container-card">
                         <div className="avatar-image-card">

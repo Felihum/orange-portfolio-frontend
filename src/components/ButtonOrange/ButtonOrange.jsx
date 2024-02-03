@@ -8,9 +8,10 @@ import React from "react"
 //     )
 // }
 
-const Button = ({classN,value}) => {
+// eslint-disable-next-line react/prop-types
+const Button = ({ classN, value, email, password, callLogin }) => {
     return (
-        <button className={classN} >{value}</button>
+        <button className={classN} onClick={() => callLogin( email, password)} >{value}</button>
     )
 }
 

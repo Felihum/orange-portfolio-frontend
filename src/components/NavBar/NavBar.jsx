@@ -6,13 +6,13 @@ import "./NavBar.css"
 import NotificationIcon from "../NotificationIcon/NotificationIcon";
 
 // eslint-disable-next-line react/prop-types
-function NavBar({ openModalNotification, setOpenModalNotification }) {
+function NavBar({ handleShow, openModalNotification, setOpenModalNotification }) {
     return (
         <div className='menu'>
             <div className="rading-container">
                 <div className="header">
                     <div className="burger-container">
-                        <img src={burger} />
+                        <button onClick={() => handleShow(true)}><img src={burger} /></button>
                     </div>
                     <div className='container-logo'>
                         <img src={logo} className="image-logo" />
