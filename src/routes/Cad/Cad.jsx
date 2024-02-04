@@ -1,17 +1,25 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import GoogleBtn from "../../components/GoogleButton/GogleBtn";
 import Button from "../../components/ButtonOrange/ButtonOrange";
 import InputText from "../../components/inputText/InputText";
 import InputPassword from "../../components/inputPassword/InputPass";
 import AlertSucess from "../../components/alerts/AlertSucess";
 import './Cad.css'
+import { AuthContext } from "../../context/AuthContext";
+import SelectNacionality from "../../components/SelectNacionality/SelectNacionality";
 
 export default function Cad(){
+  const { register } = useContext(AuthContext)
+
   const [email,setEmail] = useState("")
   const [nome,setNome] = useState("")
   const [sNome,setSNome] = useState("")
   const [password,setPassword] = useState()
   const [error,setError] = useState("")
+
+  function callRegister(){
+    register()
+  }
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -42,6 +50,7 @@ export default function Cad(){
                 value={sNome}
                 variant="outlined"
               ></InputText>
+              <SelectNacionality />
               <InputText
                 type="email"
                 name="email"
@@ -52,7 +61,7 @@ export default function Cad(){
                 variant="outlined"
               ></InputText>
               <InputPassword></InputPassword>
-              <Button value="CADASTRAR" classN="btnLaranja"></Button>
+              <Button value="CADASTRAR" classN="btnLaranja" onClick={callRegister}></Button>
             </form>
           </div>
         </div>

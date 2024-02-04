@@ -9,6 +9,8 @@ import Discover from './routes/Discover/Discover.jsx';
 import { AuthContext, AuthProvider } from "./context/AuthContext.jsx"
 import Cad from './routes/Cad/Cad.jsx'
 import Login from './routes/Login/Login.jsx'
+import LoginTeste from './routes/LoginTeste/LoginTeste.jsx'
+import CadTeste from './routes/CadTeste/CadTeste.jsx'
 
 
 
@@ -23,12 +25,12 @@ export {Private};
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />
+    path: "/login",
+    element: <LoginTeste />
   },
   {
     path: "/cadastro",
-    element: <Cad />
+    element: <CadTeste />
   },
   {
     path: "/meus-projetos",

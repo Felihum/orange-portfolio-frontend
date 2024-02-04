@@ -108,7 +108,7 @@ export default function CadTeste(){
 
                                  
                 <div className="linksLogin-final">
-                    <a href="#">Cadastre-se</a>
+                    <a href="/login">Logar</a>
                     {/* <a href="#">Esqueci minha senha</a> */}
                 </div>
                 </div>

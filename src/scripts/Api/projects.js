@@ -1,12 +1,10 @@
-import axios from "axios";
-
-const URL = "http://localhost:8080/v1/projects";
+import api from "./api";
 
 async function getAllProjects(){
     try {
-        const response = await axios.get(URL + "/todos");
+        const response = await api.get("/v1/projects/todos");
 
-        console.log(response.data[0])
+        return response.data
     } catch (error) {
         console.log(error)
     }

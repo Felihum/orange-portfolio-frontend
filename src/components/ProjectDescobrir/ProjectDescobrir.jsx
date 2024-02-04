@@ -4,10 +4,10 @@ import "../Project/Project.css"
 import "./ProjectDescobrir.css"
 
 // eslint-disable-next-line react/prop-types
-function ProjectDescobrir({ image, title, tag, link, description, setOpenModalVisual }) {
+function ProjectDescobrir(key, { image, title, tag, link, description, setOpenModalVisual }) {
 
     return (
-        <div className="project-container" onClick={() => setOpenModalVisual(true)}>
+        <div key={key} className="project-container" onClick={() => setOpenModalVisual(true)}>
             <div className="project-image-div">
                 <img src={`${image}`} alt={title} />
             </div>

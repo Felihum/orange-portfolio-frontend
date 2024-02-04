@@ -7,9 +7,31 @@ import InputText from "../../components/inputText/InputText";
 import imageLogin from "../../images/Login_Cad/img_login-0.png"
 import ImgTest from "../../images/ImageFull.png"
 import "./LoginTeste.css"
-
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import {useContext, useEffect, useState} from "react";
 
 export default function LoginTeste(){
+
+    const { login } = useContext(AuthContext)
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate();
+
+    async function callLogin(){
+      //const response = await login(email, password)
+
+      try {
+        await login(email, password)
+        navigate("/meus-projetos")
+      } catch (error) {
+        console.log(error)
+      }
+      
+     
+    }
+
     return(
         <div className="containerLoginTagFinal">
 
@@ -44,14 +66,15 @@ export default function LoginTeste(){
                         required
                         label="Endereço de email"
                         variant="outlined"
+                        onChange={(e) => setEmail(e.target.value)}
                         ></InputText>
-                        <InputPassword></InputPassword>
-                        <button className="btnLaranja">ENTRAR</button>
+                        <InputPassword setPassword={setPassword}></InputPassword>
+                        <button className="btnLaranja" onClick={callLogin}>ENTRAR</button>
                     </div>
 
                                  
                 <div className="linksLoginFinal">
-                    <a href="#">Cadastre-se</a>
+                    <a href="/cadastro">Cadastre-se</a>
                     {/* <a href="#">Esqueci minha senha</a> */}
                 </div>
                 </div>

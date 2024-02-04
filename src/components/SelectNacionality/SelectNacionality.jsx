@@ -7,7 +7,7 @@ import Select from '@mui/material/Select';
 import './SelectNacionality.css'
 const URL = "https://servicodados.ibge.gov.br/api/v1/paises/{paises}"
 
-export default function SelectNacionality(props){
+export default function SelectNacionality(){
     const [data,setData] = useState([])
     const [selectedValue,setSelectedValue] = useState('')
 

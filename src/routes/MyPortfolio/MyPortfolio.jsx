@@ -3,33 +3,30 @@ import AvatarIcon from "../../components/AvatarIcon/AvatarIcon";
 //import ButtonAdd from "../components/ButtonAdd/ButtonAdd"
 import NavBar from "../../components/NavBar/NavBar"
 import SearchBar from "../../components/SearchBar/SearchBar";
-import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
 import "./MyPortfolio.css"
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
 import ModalDelete from "../../components/ModalDelete/ModalDelete";
 import ModalEdit from "../../components/ModalEdit/ModalEdit";
 import ModalNotification from "../../components/ModalNotification/ModalNotification";
 import ProjectList from "../../components/ProjectList/ProjectList";
-import imgProjeto from "../../images/img_projeto.png"
+import { useEffect } from "react";
 import ModalBurger from "../../components/ModalBurger/ModalBurger";
+import { AuthContext } from "../../context/AuthContext";
+import { getUserById } from "../../scripts/Api/user";
 
 function MyPortfolio() {
 
-    const projetos = [
-        {
-            image: imgProjeto, 
-            title: "Projeto Teste", 
-            tags: "WEB", link: "#", 
-            description: "Descrição do projeto de teste"
-        }, 
-        {
-            image: imgProjeto, 
-            title: "Projeto Teste", 
-            tags: "UX", link: "#", 
-            description: "Descrição do projeto de teste"
-        }
-    ];
+    const { userId } = useContext(AuthContext)
+
+    const [projetos, setProjetos] = useState([]);
+
+    useEffect(() => {
+        getUserById(userId).then((data) => {
+            setProjetos(data.projects);
+        })
+        
+    }, [])
 
     const [search, setSearch] = useState('');
     const lowerSearch = search.toLowerCase();

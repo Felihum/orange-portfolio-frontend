@@ -1,11 +1,9 @@
-import axios from "axios";
-
-const URL = "http://localhost:8080/v1/users";
+import api from "./api";
 
 async function getUserByName(username){
 
     try{
-        const response = await axios.get(URL + "/buscarPorNome/" + username)
+        const response = await api.get("/v1/users/buscarPorNome/" + username)
 
         console.log(response)
     } catch(error){
@@ -14,10 +12,21 @@ async function getUserByName(username){
 
 }
 
+async function getUserById(id){
+    try {
+        const response = await api.get("/v1/users/buscar/" + id)
+
+        return response.data
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 async function getProjectsByUsername(username){
     
     try{
-        const response = await axios.get(URL + "/buscarPorNome/" + username)
+        const response = await api.get("/v1/users/buscarPorNome/" + username)
 
         if(response.data[0].projects != 0){
             return response.data[0].projects
@@ -30,4 +39,4 @@ async function getProjectsByUsername(username){
     
 }
 
-export {getUserByName, getProjectsByUsername}
+export {getUserByName, getProjectsByUsername, getUserById}
