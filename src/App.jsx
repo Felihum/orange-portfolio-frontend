@@ -28,7 +28,7 @@ function App() {
       {/* <ModalAddProjeto></ModalAddProjeto> */}
       {/* <ModalProjectAdded></ModalProjectAdded> */}
       {/* <Login></Login> */}
-      <Cad></Cad>
+      {/* <Cad></Cad> */}
     </div>
   )
 }
