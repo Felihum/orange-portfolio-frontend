@@ -1,0 +1,17 @@
+@import "../../GeneralStyle/GeneralStyle.css";
+
+.inputTextFinal{
+    background-color: var(--cor-teste);
+    width: 100%;
+    color: var(--color--neutal-120);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* [Orange P] Style Guide/Label */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.15px;
+}
+

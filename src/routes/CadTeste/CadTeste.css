@@ -207,14 +207,14 @@
 
     .loginCard-final{
         background-color: white;
-        flex: 1;
+        flex: 2;
     }
     
     .imgLogin-final{
         background-color: blue;
         display: block;
         box-sizing: border-box;
-        flex: 1;
+        flex: 1
     }
 
     .imgLogin-final{
@@ -230,13 +230,18 @@
     }
 
     .textFieldName-final{
-        background-color: white;
-        /* display: flex; */
+        /* background-color: red; */
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 18px;
     }
 
-    .inputText{
-        background-color: pink;
-        flex: 1;
+    .inputNameFinal{
+        /* background-color: red; */
+        width: 100%;
     }
 
     .tit1Login-final{

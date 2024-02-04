@@ -6,7 +6,6 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
 import "./MyPortfolio.css"
 import { useEffect, useState } from "react";
-import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
 import ModalDelete from "../../components/ModalDelete/ModalDelete";
 import ModalEdit from "../../components/ModalEdit/ModalEdit";
 import ModalNotification from "../../components/ModalNotification/ModalNotification";
