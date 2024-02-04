@@ -1,0 +1,28 @@
+.tag-div{
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: var(--action-selected, rgba(0, 0, 0, 0.08));
+}
+
+.tag-bg{
+    display: flex;
+    padding: 3px 6px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--none, 0px);
+}
+
+.tag-bg p{
+    color: var(--text-primary, rgba(0, 0, 0, 0.87));
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* chip/label */
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 138.462% */
+    letter-spacing: 0.16px;
+}
