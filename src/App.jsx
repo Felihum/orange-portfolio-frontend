@@ -18,9 +18,9 @@ function App() {
       {/* <h1>Pagina Principal</h1> */}
       {/* <Login></Login>  */}
       {/* <Cad></Cad> */}
-      <CadTeste></CadTeste>
+      {/* <CadTeste></CadTeste> */}
       {/* <MyPortfolio></MyPortfolio> */}
-      {/* <LoginTeste></LoginTeste> */}
+      <LoginTeste></LoginTeste>
       {/* <AddedPost></AddedPost> */}
       {/* <CadTeste></CadTeste> */}
       {/* <MyPortFouth></MyPortFouth> */}
