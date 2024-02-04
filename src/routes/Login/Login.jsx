@@ -1,98 +1,61 @@
-import React, {useState} from "react";
-import "./Login.css"
+import React from "react";
 import GoogleBtn from "../../components/GoogleButton/GogleBtn";
-import Button from "../../components/ButtonOrange/ButtonOrange";
-import InputText from "../../components/inputText/InputText";
-import InputPassword from "../../components/inputPassword/InputPass";
-import ImageLogin from '../../images/Login_Cad/img_login-1.png'
 import { TextField } from "@mui/material";
-import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { login } from "../../scripts/Api/login";
-
-// export default function Login(){
-//   const [email,setEmail] = useState("")
-//   const [password,setPassword] = useState()
-//   const [error,setError] = useState("")
-//   const [entrarBtn,setEntrarBtn] = useState("Entrar")
-
-//   const handleLogin = async (e) => {
-//     e.preventDefault();
-//     console.log("ok")
-//   };
-  
-//     return(
-//         <div>
-//           {/* <img src={ImageLogin} /> */}
-//           {/* {type, name, label, required, onChange, value,variant} */}
-//           <div className='login-form-wrap'>
-//             <p className="tit1Login">Entre no Orange Portifólio</p>
-//             <GoogleBtn></GoogleBtn>
-//             <form className='login-form'>
-//             <p className="tit2login">Faça login com email</p>
-//               <InputText
-//                 type="email"
-//                 name="email"
-//                 required={true}
-//                 label="Endereço de e-mail"
-//                 onChange={(e) => {setEmail(e.target.value)}}
-//                 value={email}
-//                 variant="outlined"
-//               ></InputText>
-//               <InputPassword></InputPassword>
-//               <Button value="Entrar" classN="btnLaranja"></Button>
-//               <a href="#">Cadastre-se</a>
-//             </form>
-//           </div>
-//         </div>
-//     )
-// }
-
-function callLogin( email, password){
-  login( email, password)
-}
-
+import InputPassword from "../../components/inputPassword/InputPass";
+import ButtonOrange from "../../components/ButtonOrange/ButtonOrange"
+import InputText from "../../components/inputText/InputText";
+import imageLogin from "../../images/Login_Cad/img_login-0.png"
+import ImgTest from "../../images/ImageFull.png"
+import "./Login.css"
 
 
 export default function Login(){
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
     return(
-        <div className="mainContainer">
-          <div className="containerImgLogin">
-            <img src={ImageLogin}  className="imgLogin" />
-          </div>
-          
-          <div className='login-form-wrap'>
-          <div className="containerTit">
-              <p className="tit1Login">Entre no Orange Portifólio</p>
+        <div className="containerLoginTagFinal">
+
+
+            <div className="imgLoginFinal">
+                
             </div>
-            <GoogleBtn></GoogleBtn>
-            <p className="tit2login">Faça login com email</p>
-            <br></br>
-            <TextField
-              className="textFieldLogin"              
-              type="email" 
-              name="email" 
-              required
-              label="Endereço de email"
-              onChange={(e) => setEmail(e.target.value)}
-              variant="outlined"
-            ></TextField>
-            <form className='login-form'>
-              <InputPassword setPassword={setPassword}></InputPassword>
-              <Button value="Entrar" callLogin={callLogin} email={email} password={password}  classN="btnLaranja"></Button>
-              <br/>
-              <a href="/cadastro">Cadastre-se</a>
-            </form>
-          </div>
+
+
+            <div className="loginCardFinal">
+
+
+                <div className="tit1LoginFinal">
+                    <p>Entre no Orange Portifólio</p>
+                </div>
+
+
+                <GoogleBtn></GoogleBtn>
+                <div className="containerFormLoginFinal">
+
+
+                    <div className="tit2LoginFinal">
+                        <p>Faça seu login com email</p>
+                    </div>
+
+
+                    <div className="inputsLoginFinal">
+                        <InputText
+                        className="textFieldLoginFinal"
+                        type="email"
+                        name="email"
+                        required
+                        label="Endereço de email"
+                        variant="outlined"
+                        ></InputText>
+                        <InputPassword></InputPassword>
+                        <button className="btnLaranjaFinal">ENTRAR</button>
+                    </div>
+
+                                 
+                <div className="linksLoginFinal">
+                    <a href="#">Cadastre-se</a>
+                    {/* <a href="#">Esqueci minha senha</a> */}
+                </div>
+                </div>
+            </div>
         </div>
     )
 }

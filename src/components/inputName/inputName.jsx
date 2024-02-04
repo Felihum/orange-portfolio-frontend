@@ -5,7 +5,7 @@ import './inputName.css'
 
 const InputText = ({type, name, label, required, onChange, value,variant}) => {
   return(
-        <TextField type={type} name={name} label={label} required={required} variant={variant} onChange={onChange} value={value}className='inputNameFinal'></TextField>
+        <TextField type={type} name={name} label={label} required={required} variant={variant} onChange={onChange} value={value}className='inputName-final'></TextField>
   )
 }
 

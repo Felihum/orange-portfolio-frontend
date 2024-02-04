@@ -4,57 +4,74 @@ import Button from "../../components/ButtonOrange/ButtonOrange";
 import InputText from "../../components/inputText/InputText";
 import InputPassword from "../../components/inputPassword/InputPass";
 import AlertSucess from "../../components/alerts/AlertSucess";
+import SelectNacionality from "../../components/SelectNacionality/SelectNacionality";
+import imageLogin from "../../images/Login_Cad/img_login-0.png"
+import InputName from "../../components/inputName/inputName"
 import './Cad.css'
 
-export default function Cad(){
-  const [email,setEmail] = useState("")
-  const [nome,setNome] = useState("")
-  const [sNome,setSNome] = useState("")
-  const [password,setPassword] = useState()
-  const [error,setError] = useState("")
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    console.log("ok")
-  };
-  
+
+export default function Cad(){
     return(
-        <div>
-          <AlertSucess></AlertSucess>
-          <div className='login-form-wrap'>
-            <p className="tit1Login">Cadastre-se</p>
-            <form className='login-form'>
-              <InputText
-                type="text"
-                name="name"
-                required={true}
-                label="Nome"
-                onChange={(e) => {setNome(e.target.value)}}
-                value={nome}
-                variant="outlined"
-              ></InputText>
-              <InputText
-                type="text"
-                name="sname"
-                required={true}
-                label="Sobrenome"
-                onChange={(e) => {setSNome(e.target.value)}}
-                value={sNome}
-                variant="outlined"
-              ></InputText>
-              <InputText
-                type="email"
-                name="email"
-                required={true}
-                label="Endereço de e-mail"
-                onChange={(e) => {setEmail(e.target.value)}}
-                value={email}
-                variant="outlined"
-              ></InputText>
-              <InputPassword></InputPassword>
-              <Button value="CADASTRAR" classN="btnLaranja"></Button>
-            </form>
-          </div>
+        <div className="containerLoginTag-final">
+
+
+            <div className="imgLogin-final">
+                {/* <img src={imageLogin} id="imgLoginTagCad-final"></img> */}
+            </div>
+
+
+            <div className="loginCard-final">
+
+
+                <div className="tit1Login-final">
+                    <p>Entre no Orange Portifólio</p>
+                </div>
+
+
+                <div className="containerFormLogin-final">
+
+                    <div className="inputsLogin-final">
+                        <div className="textFieldName-final">
+                            {/* <InputText
+                            type="text"
+                            name="nome"
+                            required
+                            label="Nome"
+                            variant="outlined"
+                            ></InputText>
+                            <InputText
+                            type="text"
+                            name="Snome"
+                            required
+                            label="Sobrenome"
+                            variant="outlined"
+                            ></InputText> */}
+                            <InputName
+                            type="text"
+                            name="nome"
+                            required
+                            label="Nome"
+                            variant="outlined"></InputName>
+                            <InputName
+                            type="text"
+                            name="Snome"
+                            required
+                            label="Sobrenome"
+                            variant="outlined"></InputName>
+                        </div>
+                        <SelectNacionality></SelectNacionality>
+                        <InputPassword></InputPassword>
+                        <button className="btnLaranjaFinal">ENTRAR</button>
+                    </div>
+
+                                 
+                <div className="linksLogin-final">
+                    <a href="#">Cadastre-se</a>
+                    {/* <a href="#">Esqueci minha senha</a> */}
+                </div>
+                </div>
+            </div>
         </div>
     )
 }

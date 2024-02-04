@@ -1,8 +1,7 @@
+
+import MyPortfolio from './routes/MyPortfolio/MyPortfolio'
 import Login from "./routes/Login/Login"
 import Cad from "./routes/Cad/Cad"
-import MyPortfolio from './routes/MyPortfolio/MyPortfolio'
-import LoginTeste from "./routes/LoginTeste/LoginTeste"
-import CadTeste from "./routes/CadTeste/CadTeste"
 import MyPortFouth from "./routes/MyPortFourth/MyPortFourth"
 import UserDetails from "./components/UserDetails/UserDetails"
 import SelectNacionality from "./components/SelectNacionality/SelectNacionality"
@@ -20,7 +19,7 @@ function App() {
       {/* <Cad></Cad> */}
       {/* <CadTeste></CadTeste> */}
       {/* <MyPortfolio></MyPortfolio> */}
-      <LoginTeste></LoginTeste>
+      {/* <Login></Login> */}
       {/* <AddedPost></AddedPost> */}
       {/* <CadTeste></CadTeste> */}
       {/* <MyPortFouth></MyPortFouth> */}
@@ -28,6 +27,8 @@ function App() {
       {/* <SelectNacionality></SelectNacionality> */}
       {/* <ModalAddProjeto></ModalAddProjeto> */}
       {/* <ModalProjectAdded></ModalProjectAdded> */}
+      {/* <Login></Login> */}
+      <Cad></Cad>
     </div>
   )
 }
