@@ -39,7 +39,7 @@ function MyPortfolio() {
     const [openModalDelete, setOpenModalDelete] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [openModalNotification, setOpenModalNotification] = useState(false);
-    const [isOpen,setIsOpen] = useState(true)
+    const [isOpen,setIsOpen] = useState(false)
 
     const [show, setShow] = useState(false);
 
@@ -70,7 +70,8 @@ function MyPortfolio() {
                         <div className="optBurger"><a href="#">Descobrir</a></div>
                     </div>
                 </div> */}
-                <MyModalBurger isOpen={isOpen}></MyModalBurger>
+    
+                
 
 
 
