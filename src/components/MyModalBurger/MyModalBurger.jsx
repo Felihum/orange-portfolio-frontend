@@ -4,28 +4,24 @@ import "./MyModalBurger.css";
 
 export default function MyModalBurger({ isOpen, toggleModal }) {
   const handleBurgerClick = () => {
-    toggleModal(); // Utilize a função para alternar o estado
+    toggleModal(); // função para abrir ou fechar o modal
   };
 
-  if (isOpen) {
-    return (
-      <div className="menuBurgerOptions">
-        <div className="burger-container">
-          <button onClick={handleBurgerClick}>
-            <img src={burger} alt="Burger Menu" />
-          </button>
+  return (
+    <div className={`menuBurgerOptions ${isOpen ? "open" : ""}`}>
+      <div className="burger-container">
+        <button onClick={handleBurgerClick}>
+          <img src={burger} alt="Burger Menu" />
+        </button>
+      </div>
+      <div className="optionsBurger">
+        <div className="optBurger">
+          <a href="#">Meus Projetos</a>
         </div>
-        <div className="optionsBurger">
-          <div className="optBurger">
-            <a href="#">Meus Projetos</a>
-          </div>
-          <div className="optBurger">
-            <a href="#">Descobrir</a>
-          </div>
+        <div className="optBurger">
+          <a href="#">Descobrir</a>
         </div>
       </div>
-    );
-  } else {
-    return null;
-  }
+    </div>
+  );
 }
