@@ -48,3 +48,111 @@
         background-color: white;
     }
 }
+
+@media screen and (max-width: 500px){
+    .menuBurgerOptions{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 100vh;
+        background-color: #113;
+        position: absolute;
+        top: 0px;
+        left: -300px;
+        z-index: -1;
+        padding: 16px 30px;
+        transition: left 0.3s ease;
+    }
+
+    .menuBurgerOptions.open {
+        left: 0; /* quando estiver aberto, move para a posição 0 */
+      }
+
+    .burger-container{
+        /* background-color: red; */
+        /* display: flex; */
+        width: 24px;
+        height: 41px;
+        /* position: absolute; */
+    }
+    
+    .optionsBurger{
+        margin-top: 16px;
+        /* background-color: blueviolet;
+        width: 300px; */
+    }
+    
+    .optBurger{
+        margin-bottom: 16px;
+        /* margin-left: 16px; */
+        width: 100%;
+    }
+    
+    .optBurger > a{
+        text-decoration: none;
+        font-size: 24px;
+        color: white;
+    }
+
+    .optBurger > a:hover{
+        color: black;
+        background-color: white;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .menuBurgerOptions{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 100vh;
+        background-color: #113;
+        position: absolute;
+        top: 0px;
+        left: -400px;
+        z-index: -1;
+        padding: 16px 30px;
+        transition: left 0.3s ease;
+    }
+
+    .menuBurgerOptions.open {
+        left: 0; /* quando estiver aberto, move para a posição 0 */
+      }
+
+    .burger-container{
+        /* background-color: red; */
+        /* display: flex; */
+        width: 24px;
+        height: 41px;
+        /* position: absolute; */
+    }
+    
+    .optionsBurger{
+        margin-top: 16px;
+        /* background-color: blueviolet;
+        width: 300px; */
+    }
+    
+    .optBurger{
+        margin-bottom: 16px;
+        /* margin-left: 16px; */
+        width: 100%;
+    }
+    
+    .optBurger > a{
+        text-decoration: none;
+        font-size: 24px;
+        color: white;
+    }
+
+    .optBurger > a:hover{
+        color: black;
+        background-color: white;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .menuBurgerOptions{
+        display: none;
+    }
+}
