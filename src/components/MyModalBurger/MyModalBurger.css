@@ -1,4 +1,10 @@
-@media screen and (max-width: 360px){
+@media screen  and (max-width: 359px) {
+    .menuBurgerOptions{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 360px){
     .menuBurgerOptions{
         display: flex;
         flex-direction: column;
@@ -49,7 +55,7 @@
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (min-width: 500px){
     .menuBurgerOptions{
         display: flex;
         flex-direction: column;
@@ -58,7 +64,7 @@
         background-color: #113;
         position: absolute;
         top: 0px;
-        left: -300px;
+        left: -500px;
         z-index: -1;
         padding: 16px 30px;
         transition: left 0.3s ease;
@@ -100,7 +106,7 @@
     }
 }
 
-@media screen and (max-width: 660px){
+@media screen and (min-width: 660px){
     .menuBurgerOptions{
         display: flex;
         flex-direction: column;
