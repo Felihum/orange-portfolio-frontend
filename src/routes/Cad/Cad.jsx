@@ -4,6 +4,9 @@ import Button from "../../components/ButtonOrange/ButtonOrange";
 import InputText from "../../components/inputText/InputText";
 import InputPassword from "../../components/inputPassword/InputPass";
 import AlertSucess from "../../components/alerts/AlertSucess";
+import SelectNacionality from "../../components/SelectNacionality/SelectNacionality";
+import imageLogin from "../../images/Login_Cad/img_login-0.png"
+import InputName from "../../components/inputName/inputName"
 import './Cad.css'
 import { AuthContext } from "../../context/AuthContext";
 import SelectNacionality from "../../components/SelectNacionality/SelectNacionality";

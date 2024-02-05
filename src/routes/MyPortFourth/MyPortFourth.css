@@ -3,7 +3,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-color: white;
 }
 
@@ -12,6 +12,7 @@ body {
     .backGroundDiv{
         background-color: #303133;
         height: 100%;
+        width: 100%;
         /* position: fixed; */
         display: flex;
         justify-content: center;
@@ -22,6 +23,7 @@ body {
         width: 360px;
         height: 60%;
         border-radius: 24px 24px 0px 0px;
+        /* margin: 148px 30px 20px 30px; */
         margin-top: 148px;
         /* text-align: center;
         display: flex;
@@ -49,12 +51,15 @@ body {
     .imgProjectUser{
         width: 312px;
         height: 258px;
-        flex-shrink: 0;
+        /* flex-shrink: 0; */
         margin: 0px 24px 0px 24px;
         justify-content: space-around;
         /* flex-shrink: 0; */
     }
     
+    /* #imgProjectUserArchive{
+        width: 100px;
+    } */
     
     .userDataProjectNoComponent{
         display: flex;
