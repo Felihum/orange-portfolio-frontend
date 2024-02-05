@@ -1,9 +1,9 @@
 
 import AvatarIcon from "../../components/AvatarIcon/AvatarIcon"
-import TagsChip from "../TagsChip/TagsChip"
+//import TagsChip from "../TagsChip/TagsChip"
 import "./UserDetails.css"
 
-export default function UserDetails(){
+export default function UserDetails(tags){
     return(
         <div className="userDataProject">
 
@@ -21,7 +21,10 @@ export default function UserDetails(){
                         </div>
                     </div>
                     <div className="userTagsProject">
-                        <TagsChip></TagsChip>
+                        {
+                            console.log(tags)
+                        }
+                        
                 </div>
         </div>
     )

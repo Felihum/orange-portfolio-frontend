@@ -2,38 +2,41 @@ import NavBar from "../../components/NavBar/NavBar";
 import { TextField } from "@mui/material";
 import "./Discover.css"
 import { useState, useEffect } from "react";
-import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
 import ProjectDescobrir from "../../components/ProjectDescobrir/ProjectDescobrir"
-import { getAllProjects } from "../../scripts/Api/projects";
+import { getAllProjects, getProjectsByTag } from "../../scripts/Api/projects";
+import ModalProjectAdded from "../../components/ModalProjectAdded/ModalProjectAdded";
 
 function Discover() {
 
-    const [projetos, setProjetos] = useState([]);
+    const [projects, setProjects] = useState([])
+    const [description, setDescription] = useState("")
+    const [title, setTitle] = useState("")
+    const [tags, setTags] = useState([])
+    const [link, setLink] = useState("")
+    const [search, setSearch] = useState(null)
+
 
     useEffect(() => {
         getAllProjects().then((data) => {
-            const projectsArray = Array.isArray(data) ? data : [];
-            setProjetos(projectsArray);
-            } 
-        )
+            //console.log(data)
+            setProjects(data)
+        })
         
     }, [])
 
+    //const [search, setSearch] = useState('');
+    //const lowerSearch = search.toLowerCase();
+    //const [projetosFiltrados, setProjetosFiltrados] = useState([])
 
-    //console.log(projetos)
+    //const projetosFiltrados = projetos.filter((projeto) => projeto.tags.name.toLowerCase().includes(lowerSearch));
 
-
-    const [search, setSearch] = useState('');
-    const lowerSearch = search.toLowerCase();
-
-    //const projetosFiltrados = projetos.filter((projeto) => projeto.tags.toLowerCase().includes(lowerSearch));
-
+    //console.log(projects)
     const[openModalVisual, setOpenModalVisual] = useState(false)
 
     return (
         <div>
             <div className="modal-section">
-                <ModalAddProjeto isOpen={openModalVisual} />
+                <ModalProjectAdded isOpen={openModalVisual} setModalOpen={setOpenModalVisual} description={description} title={title} link={link} tags={tags}/>
             </div>
             <NavBar />
             <div className="div-geral">
@@ -47,8 +50,9 @@ function Discover() {
                 </div>
                 <div className="project-section">
                     {
-                        projetos.map((projeto) => (
-                            <ProjectDescobrir key={projeto.id} setOpenModalVisual={setOpenModalVisual} link={projeto.link} title={projeto.titleProject} tag={projeto.tags} description={projeto.description} />
+                        projects.map((project) => (
+                            <ProjectDescobrir key={project.id} project={project} setDescription={setDescription} setTitle={setTitle} setTags={setTags} setLink={setLink} onClick={setOpenModalVisual}  />
+                            
                         ))
                     }
                     

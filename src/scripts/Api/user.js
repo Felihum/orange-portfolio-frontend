@@ -1,4 +1,4 @@
-import api from "./api";
+import api from "./api.js";
 
 async function getUserByName(username){
 
@@ -15,7 +15,6 @@ async function getUserByName(username){
 async function getUserById(id){
     try {
         const response = await api.get("/v1/users/buscar/" + id)
-
         return response.data
 
     } catch (error) {
@@ -39,4 +38,20 @@ async function getProjectsByUsername(username){
     
 }
 
-export {getUserByName, getProjectsByUsername, getUserById}
+async function getProjectsByUserId(id){
+    
+    try{
+        const response = await api.get("/v1/users/buscar/" + id)
+
+        if(response.data[0].projects != 0){
+            return response.data[0].projects
+        } else{
+            console.log("O usuário nao possui projetos")
+        }
+    } catch(error){
+        console.log(error);
+    }
+    
+}
+
+export {getUserByName, getProjectsByUsername, getProjectsByUserId, getUserById}

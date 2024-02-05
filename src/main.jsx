@@ -8,7 +8,6 @@ import MyPortfolio from './routes//MyPortfolio/MyPortfolio.jsx';
 import Discover from './routes/Discover/Discover.jsx';
 import { AuthContext, AuthProvider } from "./context/AuthContext.jsx"
 import Cad from './routes/Cad/Cad.jsx'
-import Login from './routes/Login/Login.jsx'
 import LoginTeste from './routes/LoginTeste/LoginTeste.jsx'
 import CadTeste from './routes/CadTeste/CadTeste.jsx'
 
@@ -18,7 +17,7 @@ import CadTeste from './routes/CadTeste/CadTeste.jsx'
 const Private = ({ Item }) => {
   const { authenticated } = useContext(AuthContext);
   
-    return authenticated > 0 ? <Item /> : <Login />
+    return authenticated > 0 ? <Item /> : <LoginTeste />
 }
 
 export {Private};

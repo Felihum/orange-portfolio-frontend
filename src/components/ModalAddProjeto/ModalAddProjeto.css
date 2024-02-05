@@ -167,6 +167,10 @@
     text-transform: uppercase;
 }
 
+.modal-visualizar-card{
+    display: none;
+}
+
 @media screen and (max-width: 660px){
     .modal-card{
         width: 452px;

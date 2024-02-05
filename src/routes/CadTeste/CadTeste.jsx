@@ -1,69 +1,11 @@
 import React, {useState} from "react";
-import GoogleBtn from "../../components/GoogleButton/GogleBtn";
-import Button from "../../components/ButtonOrange/ButtonOrange";
-import InputText from "../../components/inputText/InputText";
 import InputPassword from "../../components/inputPassword/InputPass";
-import AlertSucess from "../../components/alerts/AlertSucess";
 import SelectNacionality from "../../components/SelectNacionality/SelectNacionality";
-import imageLogin from "../../images/Login_Cad/img_login-0.png"
+import InputName from "../../components/inputName/inputName"
 import './CadTeste.css'
+import InputText from "../../components/inputText/InputText";
 
 
-// export default function CadTeste(){
-//   return(
-//       <div className="containerLoginTag">
-
-
-//           <div className="imgLogin">
-//               <img src={imageLogin}></img>
-//           </div>
-
-
-//           <div className="loginCard">
-
-
-//               <div className="tit1Login">
-//                   <p>Cadastre-se</p>
-//               </div>
-
-
-   
-//               <div className="containerFormLogin">
-
-
-//                   <div className="inputsLogin">
-//                       <div className="inputTextNameSurname">
-//                         <InputText
-//                         className="textFieldLogin"
-//                         type="text"
-//                         name="nome"
-//                         required
-//                         label="Nome"
-//                         variant="outlined"
-//                         ></InputText>
-//                         <InputText
-//                         className="textFieldLogin"
-//                         type="text"
-//                         name="Snome"
-//                         required
-//                         label="Sobrenome"
-//                         variant="outlined"
-//                         ></InputText>
-//                       </div>
-//                       <InputPassword></InputPassword>
-//                       <button className="btnLaranja">ENTRAR</button>
-//                   </div>
-
-                               
-//               <div className="linksLogin">
-//                   <a href="#">Cadastre-se</a>
-//                   <a href="#">Esqueci minha senha</a>
-//               </div>
-//               </div>
-//           </div>
-//       </div>
-//   )
-// }
 
 export default function CadTeste(){
     return(
@@ -87,7 +29,7 @@ export default function CadTeste(){
 
                     <div className="inputsLogin-final">
                         <div className="textFieldName-final">
-                            <InputText
+                            {/* <InputText
                             type="text"
                             name="nome"
                             required
@@ -100,10 +42,32 @@ export default function CadTeste(){
                             required
                             label="Sobrenome"
                             variant="outlined"
-                            ></InputText>
+                            ></InputText> */}
+                            <InputName
+                            type="text"
+                            name="nome"
+                            required
+                            label="Nome"
+                            variant="outlined"></InputName>
+                            <InputName
+                            type="text"
+                            name="Snome"
+                            required
+                            label="Sobrenome"
+                            variant="outlined"></InputName>
                         </div>
+                        <SelectNacionality></SelectNacionality>
+                        <InputText
+                        className="textFieldLoginFinal"
+                        type="email"
+                        name="email"
+                        required
+                        label="Endereço de email"
+                        variant="outlined"
+                        onChange={(e) => setEmail(e.target.value)}
+                        ></InputText>
                         <InputPassword></InputPassword>
-                        <button className="btnLaranja">ENTRAR</button>
+                        <button className="btnLaranjaFinal">CADASTRAR</button>
                     </div>
 
                                  

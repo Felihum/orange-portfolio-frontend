@@ -8,7 +8,6 @@ function AuthProvider({ children }) {
 
     const [authenticated, setAuthenticated] = useState(false);
     const [loading, setLoading] = useState(true);
-    const [userId, setUserId] = useState("");
 
     useEffect(() => {
         const token = localStorage.getItem('userToken')
@@ -26,8 +25,8 @@ function AuthProvider({ children }) {
             email,
             password
         })
-        setUserId(id);
         localStorage.setItem("userToken", JSON.stringify(token));
+        localStorage.setItem("userId", id);
         api.defaults.headers.Authorization = `Bearer ${token}`
         setAuthenticated(true)
 
@@ -35,14 +34,14 @@ function AuthProvider({ children }) {
         
     }
 
-    function register(name, surname, nacionalidade, email, password, role){
+    function register(name, surname, nacionalidade, email, password){
         api.post("/auth/register", {
             name,
             surname,
             nacionalidade,
             email,
             password,
-            role
+            role: "USER"
         })
     }
 
@@ -60,7 +59,7 @@ function AuthProvider({ children }) {
     }
 
     return (
-        <AuthContext.Provider value={{ authenticated, userId, login, logout, register }}>
+        <AuthContext.Provider value={{ authenticated, login, logout, register }}>
             {children}
         </AuthContext.Provider>
     );

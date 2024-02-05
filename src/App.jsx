@@ -1,4 +1,3 @@
-import Login from "./routes/Login/Login"
 import Cad from "./routes/Cad/Cad"
 import MyPortfolio from './routes/MyPortfolio/MyPortfolio'
 import LoginTeste from "./routes/LoginTeste/LoginTeste"

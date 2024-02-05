@@ -9,21 +9,24 @@ import ModalAddProjeto from "../../components/ModalAddProjeto/ModalAddProjeto";
 import ModalDelete from "../../components/ModalDelete/ModalDelete";
 import ModalEdit from "../../components/ModalEdit/ModalEdit";
 import ModalNotification from "../../components/ModalNotification/ModalNotification";
-import ProjectList from "../../components/ProjectList/ProjectList";
+import Project from "../../components/Project/Project"
 import { useEffect } from "react";
 import ModalBurger from "../../components/ModalBurger/ModalBurger";
-import { AuthContext } from "../../context/AuthContext";
 import { getUserById } from "../../scripts/Api/user";
+import ModalProjectAdded from "../../components/ModalProjectAdded/ModalProjectAdded";
 
 function MyPortfolio() {
 
-    const { userId } = useContext(AuthContext)
-
-    const [projetos, setProjetos] = useState([]);
-
+    
+    const [projects, setProjects] = useState([]);
+    
     useEffect(() => {
+        const userId = localStorage.getItem("userId")
         getUserById(userId).then((data) => {
-            setProjetos(data.projects);
+            const previewProjects = data.projects
+            return previewProjects
+        }).then((previewProjects) => {
+            setProjects(previewProjects)
         })
         
     }, [])
@@ -31,12 +34,13 @@ function MyPortfolio() {
     const [search, setSearch] = useState('');
     const lowerSearch = search.toLowerCase();
 
-    const projetosFiltrados = projetos.filter((projeto) => projeto.tags.toLowerCase().includes(lowerSearch));
+    //const projetosFiltrados = projetos.filter((projeto) => projeto.tags.toLowerCase().includes(lowerSearch));
 
     const [openModalEdit, setOpenModalEdit] = useState(false);
     const [openModalDelete, setOpenModalDelete] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [openModalNotification, setOpenModalNotification] = useState(false);
+    const [isModalVisualizarOpen, setModalVisualizarOpen] = useState(false);
 
     const [show, setShow] = useState(false);
 
@@ -46,11 +50,12 @@ function MyPortfolio() {
     return (
         <div>
             <div className="modal-section">
-                <ModalAddProjeto isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)} />
+                <ModalAddProjeto isOpen={openModal} setModalVisualizarOpen={setModalVisualizarOpen} setModalOpen={() => setOpenModal(!openModal)} />
                 <ModalDelete isOpen={openModalDelete} setOpenModalDelete={setOpenModalDelete} />
                 <ModalEdit isOpen={openModalEdit} setModalEditOpen={setOpenModalEdit} />
                 <ModalNotification isOpen={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
                 <ModalBurger show={show} handleClose={handleClose} />
+                <ModalProjectAdded isOpen={isModalVisualizarOpen} setModalOpen={setModalVisualizarOpen} />
             </div>
             <div className="desktop-version">
                 <NavBar handleShow={handleShow} openModalNotification={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
@@ -75,13 +80,13 @@ function MyPortfolio() {
                 </div>
                 <div className="project-section">
                     {
-                        projetos.length != 0 ?
-                            projetosFiltrados.length != 0?
-                                <ProjectList setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} projetos={projetosFiltrados} />
+                        projects > 0 ?
+                            projects.map((project) => (
+                                
+                                <Project key={project.id} data={project} setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
+                            ))
                             :
-                                <p>Nao existe</p>
-                        :
-                            <AddFirst label="Adicione seu primeiro projeto" onClick={setOpenModal} />
+                                <AddFirst label="Adicione seu primeiro projeto" onClick={setOpenModal} />
                     }
                     
                     {/*<Project setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />*/}

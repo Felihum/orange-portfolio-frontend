@@ -1,11 +1,12 @@
 import "./Tag.css"
 
 // eslint-disable-next-line react/prop-types
-function Tag({ label }) {
+function Tag( key ) {
+
     return (
-        <div className="tag-div">
+        <div key={key.id} className="tag-div">
             <div className="tag-bg">
-                <p>{label}</p>
+                <p>{key.label}</p>
             </div>
         </div>
     );

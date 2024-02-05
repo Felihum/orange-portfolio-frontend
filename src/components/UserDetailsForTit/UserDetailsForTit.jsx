@@ -3,7 +3,7 @@ import AvatarIcon from "../../components/AvatarIcon/AvatarIcon"
 import TagsChip from "../TagsChip/TagsChip"
 import "./UserDetailsForTit.css"
 
-export default function UserDetailsForTit(){
+export default function UserDetailsForTit(tags){
     return(
         <div className="userDataProjectU">
 
@@ -24,7 +24,14 @@ export default function UserDetailsForTit(){
                     <p>Ecomerce One Page</p>
                 </div>
                     <div className="userTagsProjectU">
-                        <TagsChip></TagsChip>
+                    {
+                        tags.tags.map((tag) => {
+                            //console.log(tag)
+                            <TagsChip key={tag.id} label={tag.name}></TagsChip>
+                        })
+                        
+                    }
+                        
                 </div>
         </div>
     )
