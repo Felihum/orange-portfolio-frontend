@@ -12,7 +12,7 @@ import ModalNotification from "../../components/ModalNotification/ModalNotificat
 import ProjectList from "../../components/ProjectList/ProjectList";
 import imgProjeto from "../../images/img_projeto.png"
 import ModalBurger from "../../components/ModalBurger/ModalBurger";
-
+import MyModalBurger from "../../components/MyModalBurger/MyModalBurger";
 function MyPortfolio() {
 
     const projetos = [
@@ -39,11 +39,13 @@ function MyPortfolio() {
     const [openModalDelete, setOpenModalDelete] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [openModalNotification, setOpenModalNotification] = useState(false);
+    const [isOpen,setIsOpen] = useState(true)
 
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    // const handleMyBurger = () => setIsOpen(true)
 
     return (
         <div>
@@ -52,10 +54,26 @@ function MyPortfolio() {
                 <ModalDelete isOpen={openModalDelete} setOpenModalDelete={setOpenModalDelete} />
                 <ModalEdit isOpen={openModalEdit} setModalEditOpen={setOpenModalEdit} />
                 <ModalNotification isOpen={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
-                <ModalBurger show={show} handleClose={handleClose} />
+                {/* <ModalBurger show={show} handleClose={handleClose} /> */}
             </div>
             <div className="desktop-version">
                 <NavBar handleShow={handleShow} openModalNotification={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
+
+
+
+
+
+                {/* MEU CÓDIGO */}
+                {/* <div className="menuBurgerOptions">
+                    <div className="optionsBurger">
+                        <div className="optBurger"><a href="#">Meus Projetos</a></div>
+                        <div className="optBurger"><a href="#">Descobrir</a></div>
+                    </div>
+                </div> */}
+                <MyModalBurger isOpen={isOpen}></MyModalBurger>
+
+
+
                 <div className="card-section">
                     <div className="container-card">
                         <div className="avatar-image-card">

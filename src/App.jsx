@@ -18,7 +18,7 @@ function App() {
       {/* <Login></Login>  */}
       {/* <Cad></Cad> */}
       {/* <CadTeste></CadTeste> */}
-      {/* <MyPortfolio></MyPortfolio> */}
+      <MyPortfolio></MyPortfolio>
       {/* <Login></Login> */}
       {/* <AddedPost></AddedPost> */}
       {/* <CadTeste></CadTeste> */}
