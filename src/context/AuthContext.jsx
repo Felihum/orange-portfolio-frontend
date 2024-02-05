@@ -34,15 +34,27 @@ function AuthProvider({ children }) {
         
     }
 
-    function register(name, surname, nacionalidade, email, password){
-        api.post("/auth/register", {
-            name,
-            surname,
-            nacionalidade,
-            email,
-            password,
-            role: "USER"
-        })
+    async function register(name, surname, nationality, email, password){
+        console.log(name)
+        console.log(surname)
+        console.log(nationality)
+        console.log(email)
+        console.log(password)
+        try {
+            const response = await api.post("/auth/register", {
+                name,
+                surname,
+                nacionalidade: nationality,
+                email,
+                password,
+                role: "USER"
+            })
+
+            return response
+        } catch (error) {
+            return error
+        }
+
     }
 
     function logout(){

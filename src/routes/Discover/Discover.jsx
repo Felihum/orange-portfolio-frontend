@@ -8,6 +8,7 @@ import ModalProjectAdded from "../../components/ModalProjectAdded/ModalProjectAd
 
 function Discover() {
 
+    
     const [projects, setProjects] = useState([])
     const [description, setDescription] = useState("")
     const [title, setTitle] = useState("")
@@ -18,7 +19,7 @@ function Discover() {
 
     useEffect(() => {
         getAllProjects().then((data) => {
-            //console.log(data)
+            console.log(data)
             setProjects(data)
         })
         

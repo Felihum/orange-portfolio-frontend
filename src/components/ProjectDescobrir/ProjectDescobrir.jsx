@@ -5,20 +5,21 @@ import "../Project/Project.css"
 import "./ProjectDescobrir.css"
 import { getUserById } from "../../scripts/Api/user";
 import { useEffect, useState } from "react";
-import imgProjeto from "../../images/img_projeto.png"
 
 // eslint-disable-next-line react/prop-types
 function ProjectDescobrir({ project, setDescription, setTitle, setTags, setLink, onClick }) {
 
     const [user, setUser] = useState("");
-    const [tagsFiltradas, setTagsFiltradas] = useState([]);
+    //const [tagsFiltradas, setTagsFiltradas] = useState([]);
 
+    //console.log(project)
     useEffect(() => {
         getUserById(project.user).then((data) => {
+            //console.log(data)
             if (data && data.name) {
                 setUser(data.name);
             } else {
-                setUser("Nome não disponível"); // Ou qualquer valor padrão desejado
+                setUser(""); // Ou qualquer valor padrão desejado
             }
         })
     }, [])

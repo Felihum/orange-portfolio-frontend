@@ -17,7 +17,7 @@ function ModalSuccess({ isOpenSuccess, setModalSuccessOpen }) {
                             </div>
                         </div>
                         <div className="button-section">
-                            <button className="btn-voltar" onClick={setModalSuccessOpen}>Voltar para Projetos</button>
+                            <button className="btn-voltar" onClick={() => setModalSuccessOpen(false)}>Voltar para Projetos</button>
                         </div>
                     </div>
                 </div>

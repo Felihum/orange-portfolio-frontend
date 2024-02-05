@@ -15,19 +15,19 @@ function ModalAddProjeto({ isOpen, setModalVisualizarOpen, setModalOpen}) {
     const [tagsTemp, setTagsTemp] = useState([])
     const [link, setLink] = useState("")
     const [description, setDescription] = useState("")
-    const [date, setDate] = useState()
-    const [isModalSuccessOpen, setModalSuccessOpen] = useState();
-
-    async function defineDate(){
-        await setDate(new Date())
-    }
+    const [isModalSuccessOpen, setModalSuccessOpen] = useState(false);
 
     async function createProjectDef(){
         try {
-            await defineDate();
             const tags = [{"name": tagsTemp}];
-            createProject(image, title, tags, link, description, date);
-            setModalSuccessOpen(true)
+            const response = await createProject(image, title, tags, link, description);
+            if(response){
+                setModalSuccessOpen(response)
+                setModalOpen(false)
+            }
+            else{
+                console.log(response)
+            }
 
         } catch (error) {
             console.log(error)
@@ -72,10 +72,10 @@ function ModalAddProjeto({ isOpen, setModalVisualizarOpen, setModalOpen}) {
                             </div>
                             <div className="div-button">
                                 <div className="btn-salvar">
-                                    <button type="submit" onClick={() => {createProjectDef()}}>Salvar</button>
+                                    <button onClick={async () => { await createProjectDef()}}>Salvar</button>
                                 </div>
                                 <div className="btn-cancelar">
-                                    <button onClick={setModalOpen}>Cancelar</button>
+                                    <button onClick={() => setModalOpen(false)}>Cancelar</button>
                                 </div>
                             </div>
                         </div>

@@ -80,7 +80,7 @@ function MyPortfolio() {
                 </div>
                 <div className="project-section">
                     {
-                        projects > 0 ?
+                        projects.length > 0 ?
                             projects.map((project) => (
                                 
                                 <Project key={project.id} data={project} setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />

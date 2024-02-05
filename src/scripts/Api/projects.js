@@ -20,18 +20,19 @@ async function getProjectsByTag(tag){
     }
 }
 
-async function createProject(image, titleProject, tags, link, description, date) {
-    //console.log(titleProject);
+async function createProject(image, titleProject, tags, link, description) {
+    console.log(titleProject);
     console.log(tags);
-    //console.log(link);
-    //console.log(description); 
+    console.log(link);
+    console.log(description);
+    console.log(new Date());
   
     try {
-      await api.post("/v1/projects/criarProjeto", {
+      const result = await api.post("/v1/projects/criarProjeto", {
         titleProject: titleProject,
         link: link,
         description: description,
-        date: date,
+        date: new Date(),
         user: {
           id: localStorage.getItem("userId"),
         },
@@ -42,9 +43,9 @@ async function createProject(image, titleProject, tags, link, description, date)
           },
         ],
       });
-      console.log("Enviado");
+      return(true);
     } catch (error) {
-      console.log(error);
+      return(error);
     }
 }
 
