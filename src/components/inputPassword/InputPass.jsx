@@ -22,7 +22,7 @@ export default function InputAdornments( {setPassword} ) {
     <Box >
       <div>
         <FormControl sx={{ mb: 2, mt:2}} variant="outlined" className='inputTextFinal'>
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-password">Senha</InputLabel>
           <OutlinedInput
             required
             id="outlined-adornment-password"
