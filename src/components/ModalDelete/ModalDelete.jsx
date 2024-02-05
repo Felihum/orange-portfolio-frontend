@@ -1,8 +1,16 @@
+import { useContext } from "react";
 import "./ModalDelete.css"
+import { ModalContext } from "../../context/ModalContext";
 
 // eslint-disable-next-line react/prop-types
-function ModalDelete({ isOpen, setOpenModalDelete }) {
-    if(isOpen){
+function ModalDelete() {
+
+    const {
+        openModalDelete,
+        setOpenModalDelete
+    } = useContext(ModalContext)
+
+    if(openModalDelete){
         return (
             <div className="delete-modal-bg">
                 <div className="delete-modal-div">

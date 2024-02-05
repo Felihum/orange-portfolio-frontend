@@ -4,7 +4,7 @@ import EditMenu from "../EditMenu/EditMenu";
 import "./EditIcon.css"
 
 // eslint-disable-next-line react/prop-types
-function EditIcon({ setOpenModalEdit, setOpenModalDelete }) {
+function EditIcon({projectId, setProjectId}) {
     const [openMenu, setOpenMenu] = useState(false);
 
     return (
@@ -13,7 +13,7 @@ function EditIcon({ setOpenModalEdit, setOpenModalDelete }) {
                 <button onClick={() => setOpenMenu(!openMenu)} onMouseOut={() => setOpenMenu(false)} onMouseOver={() => setOpenMenu(true)}><img src={editIcon}/></button>
             </div>
             <div className="div-modal">
-                <EditMenu setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} isOpen={openMenu} setOpenMenu={setOpenMenu}/>
+                <EditMenu projectId={projectId} setProjectId={setProjectId} isOpen={openMenu} setOpenMenu={setOpenMenu} />
             </div>
         </div>
     );

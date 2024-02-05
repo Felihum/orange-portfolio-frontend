@@ -1,14 +1,18 @@
 import NavBar from "../../components/NavBar/NavBar";
 import { TextField } from "@mui/material";
 import "./Discover.css"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import ProjectDescobrir from "../../components/ProjectDescobrir/ProjectDescobrir"
 import { getAllProjects, getProjectsByTag } from "../../scripts/Api/projects";
 import ModalProjectAdded from "../../components/ModalProjectAdded/ModalProjectAdded";
+import { ModalContext } from "../../context/ModalContext";
 
 function Discover() {
 
-    
+    const {
+        openModalVisual, setOpenModalVisual
+    } = useContext(ModalContext)
+
     const [projects, setProjects] = useState([])
     const [description, setDescription] = useState("")
     const [title, setTitle] = useState("")
@@ -32,7 +36,7 @@ function Discover() {
     //const projetosFiltrados = projetos.filter((projeto) => projeto.tags.name.toLowerCase().includes(lowerSearch));
 
     //console.log(projects)
-    const[openModalVisual, setOpenModalVisual] = useState(false)
+    
 
     return (
         <div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import AddFile from "../AddFile/AddFile";
 import ModalSuccess from "../ModalSuccess/ModalSuccess";
 import "./ModalAddProjeto.css"
@@ -6,9 +6,15 @@ import TextField from "@mui/material/TextField"
 import { format } from 'date-fns';
 //import ModalProjectAdded from "../ModalProjectAdded/ModalProjectAdded";
 import { createProject } from "../../scripts/Api/projects";
+import { ModalContext } from "../../context/ModalContext";
 
 // eslint-disable-next-line react/prop-types
 function ModalAddProjeto({ isOpen, setModalVisualizarOpen, setModalOpen}) {
+
+    const {
+        openModalAdd,
+        setOpenModalAdd
+    } = useContext(ModalContext)
 
     const [image, setImage] = useState([])
     const [title, setTitle] = useState("")
@@ -35,7 +41,7 @@ function ModalAddProjeto({ isOpen, setModalVisualizarOpen, setModalOpen}) {
         
     }
 
-    if(isOpen){
+    if(openModalAdd){
         return (
             <div className="bg-modal">
                 <div className="modal-success-card">
@@ -75,7 +81,7 @@ function ModalAddProjeto({ isOpen, setModalVisualizarOpen, setModalOpen}) {
                                     <button onClick={async () => { await createProjectDef()}}>Salvar</button>
                                 </div>
                                 <div className="btn-cancelar">
-                                    <button onClick={() => setModalOpen(false)}>Cancelar</button>
+                                    <button onClick={() => setOpenModalAdd(false)}>Cancelar</button>
                                 </div>
                             </div>
                         </div>

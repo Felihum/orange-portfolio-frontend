@@ -1,18 +1,24 @@
 import UserDetailsForTit from "../UserDetailsForTit/UserDetailsForTit"
-import UserDetails from "../UserDetails/UserDetails"
-import ImageMyPortFourth from "../../images/MyPortFourth/img_landingpage.png"
 import { Link } from "react-router-dom";
 import "./ModalProjectAdded.css"
 import { IoMdClose } from "react-icons/io";
+import { useContext } from "react";
+import { ModalContext } from "../../context/ModalContext";
 
 // eslint-disable-next-line react/prop-types
-export default function ModalProjectAdded({ isOpen, setModalOpen, description, link, title, tags }){
-    if(isOpen){
+export default function ModalProjectAdded({ description, link, title, tags }){
+    
+    const {
+        openModalVisual,
+        setOpenModalVisual
+    } = useContext(ModalContext)
+    
+    if(openModalVisual){
         return(
             <div className="big-modal-added">
                 <div className="modal-card-added">
                     <div className="icon-close-container">
-                        <div className="icon-x-close" onClick={() => setModalOpen(false)}>
+                        <div className="icon-x-close" onClick={() => setOpenModalVisual(false)}>
                             <IoMdClose />
                         </div>
                     </div>

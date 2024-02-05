@@ -2,10 +2,38 @@ import "./ModalEdit.css"
 import AddFile from "../AddFile/AddFile";
 import ModalSuccess from "../ModalSuccess/ModalSuccess";
 import TextField from "@mui/material/TextField"
+import { useContext, useState } from "react";
+import { ModalContext } from "../../context/ModalContext";
+import { ProjectContext } from "../../context/ProjectContext";
+import { updateProject } from "../../scripts/Api/projects";
 
 // eslint-disable-next-line react/prop-types
-function ModalEdit({ isOpen, setModalEditOpen }) {
-    if(isOpen){
+function ModalEdit({projectId}) {
+
+    console.log(projectId)
+
+    const [image, setImage] = useState("")
+    const [title, setTitle] = useState("");
+    const [tags, setTags] = useState([]);
+    const [link, setLink] = useState("");
+    const [description, setDescription] = useState("");
+
+    async function editProject(){
+        try {
+            await updateProject(id, image, title, tags, link, description)
+
+            console.log("Editou")
+        } catch (error) {
+            window.alert(error)
+        }
+    }
+
+    const {
+        openModalEdit,
+        setOpenModalEdit
+    } = useContext(ModalContext)
+
+    if(openModalEdit){
         return (
             <form>
                 <div className="bg-modal">
@@ -14,7 +42,7 @@ function ModalEdit({ isOpen, setModalEditOpen }) {
                     </div>
                     <div className="modal-card">
                         <div className="text-cnt">
-                            <h3>Editar projeto</h3>
+                            <h3>{projectId}</h3>
                         </div>
                         <div className="conteudo-form-section">
                             <div className="input-form-container">
@@ -43,10 +71,10 @@ function ModalEdit({ isOpen, setModalEditOpen }) {
                                 </div>
                                 <div className="div-button">
                                     <div className="btn-salvar">
-                                        <button>Salvar</button>
+                                        <button onClick={() => editProject()}>Salvar</button>
                                     </div>
                                     <div className="btn-cancelar">
-                                        <button onClick={setModalEditOpen}>Cancelar</button>
+                                        <button onClick={() => setOpenModalEdit(false)}>Cancelar</button>
                                     </div>
                                 </div>
                             </div>

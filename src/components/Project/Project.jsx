@@ -3,15 +3,22 @@ import EditIcon from "../EditIcon/EditIcon";
 import Tag from "../Tag/Tag";
 import "./Project.css";
 import AvatarIcon from "../AvatarIcon/AvatarIcon";
+import { useContext, useState } from "react";
+import ModalEdit from "../ModalEdit/ModalEdit";
 
 // eslint-disable-next-line react/prop-types
-function Project( {data, setOpenModalEdit, setOpenModalDelete} ) {
+function Project( {data} ) {
 
+    const [projectId, setProjectId] = useState();
+    //console.log(data.id)
     
     return (
-        <div key={data.id} className="project-container">
+        <div className="project-container">
+            <div>
+                <ModalEdit projectId={projectId} />
+            </div>
             <div className="edit-icon-container">
-                <EditIcon setOpenModalEdit={setOpenModalEdit} setOpenModalDelete={setOpenModalDelete} />
+                <EditIcon projectId={data.id} setProjectId={setProjectId} />
             </div>
             <div className="project-image-div">
                 {
@@ -35,5 +42,6 @@ function Project( {data, setOpenModalEdit, setOpenModalDelete} ) {
         </div>
     );
 }
+
 
 export default Project;

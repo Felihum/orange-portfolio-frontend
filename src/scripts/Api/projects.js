@@ -20,6 +20,31 @@ async function getProjectsByTag(tag){
     }
 }
 
+async function updateProject(id, image, titleProject, tags, link, description){
+    try {
+      const response = await api.patch("/v1/projects/atualizar/" + id, {
+        titleProject: titleProject,
+        link: link,
+        description: description,
+        date: new Date(),
+        user: {
+          id: localStorage.getItem("userId"),
+        },
+        tags: tags.map(tag => ({ name: tag.name })),
+        images: [
+          {
+            image: image,
+          },
+        ],
+      })
+
+      console.log(response)
+
+    } catch (error) {
+      console.log(error)
+    }
+}
+
 async function createProject(image, titleProject, tags, link, description) {
     console.log(titleProject);
     console.log(tags);
@@ -50,4 +75,4 @@ async function createProject(image, titleProject, tags, link, description) {
 }
 
 
-export { getAllProjects, getProjectsByTag, createProject }
+export { getAllProjects, getProjectsByTag, createProject, updateProject }
