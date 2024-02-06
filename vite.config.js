@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: "/orange-portfolio-frontend",
+  build: {
+    rollupOptions: {
+      external: ["axios", 'react-icons/io', 'react-dropzone'],
+    },
+  },
 })
