@@ -1,0 +1,101 @@
+.div-geral{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.paragraph-discover-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragraph-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 744px;
+    height: 102px;
+    margin-top: 185px;
+}
+
+.paragraph-div h1{
+    color: var(--Color-Brand-Primria-Primary-90, #224);
+    text-align: center;
+    /* [Orange P] Style Guide/H4 */
+    font-family: Roboto;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px; /* 100% */
+    letter-spacing: 0.25px;
+}
+
+.search-tag-section{
+    margin-top: 120px;
+    width: 699px;
+    padding: 32px;
+}
+
+.search-tag{
+    width: 100%;
+}
+
+@media screen and (max-width: 660px){
+    
+}
+
+@media screen and (max-width: 500px){
+    .paragraph-div{
+        width: 312px;
+    }
+
+    .paragraph-div h1{
+        color: var(--Color-Brand-Primria-Primary-90, #224);
+        text-align: center;
+        /* [Orange P] Style Guide/H5 */
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 100% */
+    }
+
+    .search-tag-section{
+        margin-top: 120px;
+        width: 312px;
+        padding: 32px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .paragraph-div{
+        width: 312px;
+    }
+
+    .paragraph-div h1{
+        color: var(--Color-Brand-Primria-Primary-90, #224);
+        text-align: center;
+        /* [Orange P] Style Guide/H5 */
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 100% */
+    }
+
+    .search-tag-section{
+        width: 100%;
+        display: flex;
+        padding: var(--none, 0px) 12px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: var(--none, 0px);
+        align-self: stretch;
+    }
+
+}

@@ -2,6 +2,7 @@ import "./SearchBar.css"
 //import Input from "../Input/Input"
 import { TextField } from "@mui/material";
 
+// eslint-disable-next-line react/prop-types
 function SearchBar() {
     return (
         <div className="container-search-bar">

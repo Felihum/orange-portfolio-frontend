@@ -18,5 +18,17 @@
 }
 
 .input{
-    width: 513px;
+    width: 100%;
+}
+
+@media screen and (max-width: 500px){
+    .input{
+        width: 430px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .input{
+        width: 312px;
+    }
 }

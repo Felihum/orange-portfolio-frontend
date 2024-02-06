@@ -1,0 +1,12 @@
+
+
+@media (max-width: 360px){
+    .alertSucess{
+        position: relative;
+        top: 20px;
+    }
+    .container_alert_sucess{
+        width: 100%;
+        background-color: red;
+    }
+}

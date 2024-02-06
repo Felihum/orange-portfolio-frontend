@@ -49,3 +49,23 @@
 .text-compartilhe-container{
     width: 270px;
 }
+
+@media screen and (max-width: 360px){
+    .add-first-container{
+        display: flex;
+        width: 312px;
+        height: 258px;
+        padding: var(--none, 68px) var(--none, 21px);
+        
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        
+        flex-shrink: 0;
+    }
+
+    .text-container{
+        width: 249px;
+        
+    }
+}
