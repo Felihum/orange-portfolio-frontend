@@ -23,7 +23,7 @@ export default function Login(){
 
 
                 <div className="tit1LoginFinal">
-                    <p>Entre no Orange Portifólio</p>
+                    <p>Entre no Orange Portfólio</p>
                 </div>
 
 

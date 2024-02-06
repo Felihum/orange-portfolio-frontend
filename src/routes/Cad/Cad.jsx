@@ -25,7 +25,7 @@ export default function Cad(){
 
 
                 <div className="tit1Login-final">
-                    <p>Entre no Orange Portifólio</p>
+                    <p>Cadastre-se</p>
                 </div>
 
 

@@ -1,22 +1,22 @@
 @import "../../GeneralStyle/GeneralStyle.css";
 
 /* Independente de tamanho */
-.containerLoginTagFinal{
+.containerLoginTagFinal {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.imgLoginFinal{
+.imgLoginFinal {
     display: none;
 }
 
 
-.containerFormLoginFinal{
+.containerFormLoginFinal {
     width: 100%;
 }
 
-.loginCardFinal{
+.loginCardFinal {
     /* background-color: rgb(208, 175, 238); */
     display: flex;
     flex-direction: column;
@@ -24,12 +24,12 @@
     align-items: center;
 }
 
-.tit1LoginFinal{
+.tit1LoginFinal {
     text-align: center;
     width: 100%;
 }
 
-.tit1LoginFinal > p {
+.tit1LoginFinal>p {
     font-family: Roboto;
     font-size: 24px;
     font-style: normal;
@@ -38,7 +38,7 @@
     width: 100%;
 }
 
-.tit2LoginFinal > p{
+.tit2LoginFinal>p {
     color: var(--color-neutral-110);
 
     /* [Orange P] Style Guide/Subtitle 1 */
@@ -46,30 +46,31 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 100% */
+    line-height: 16px;
+    /* 100% */
     letter-spacing: 0.15px;
     width: 100%;
 }
 
 
 
-.linksLoginFinal{
+.linksLoginFinal {
     display: flex;
     justify-content: space-between;
     width: 100%;
     /* background-color: red; */
 }
 
-.linksLoginFinal > a{
+.linksLoginFinal>a {
     text-decoration: none;
     color: var(--color-neutral-100)
 }
 
-.btnLaranjaFinal{
+.btnLaranjaFinal {
     color: #FCFDFF;
     border-radius: var(--borderRadius, 4px);
     background: var(--Color-Brand-Secundria-Secondary-100, #F52);
-    border:none;
+    border: none;
 
     /* elevation/2 */
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.20), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
@@ -82,16 +83,14 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    font-size: 
-    15px;
+    font-size:
+        15px;
     margin-bottom: 16px;
 }
 
-@media screen and (max-width: 360px){
-        /* body{
-        height: 640px;
-        } */
-    .containerLoginTagFinal{
+@media screen and (max-width: 360px) {
+
+    .containerLoginTagFinal {
         /* justify-content: center; */
         align-items: center;
         padding: 45px 109px;
@@ -102,17 +101,15 @@
     }
 
 
-    .loginCardFinal{
+    .loginCardFinal {
         width: 312px;
         gap: 32px;
         /* background-color: yellow; */
     }
 
-    .tit1Login{
 
-    }
 
-    .tit2LoginFinal{
+    .tit2LoginFinal {
         display: flex;
         height: var(--4, 32px);
         padding: var(--none, 0px);
@@ -124,8 +121,8 @@
 }
 
 
-@media (max-width: 500px){
-    .containerLoginTag{
+@media (max-width: 500px) {
+    .containerLoginTag {
         display: flex;
         /* justify-content: center; */
         align-items: center;
@@ -137,17 +134,17 @@
     }
 
 
-    .loginCard{
+    .loginCard {
         width: 312px;
         gap: 32px;
         /* background-color: yellow; */
     }
 
-    .tit1Login{
+    .tit1Login {
         margin: 32px;
     }
 
-    .tit2Login{
+    .tit2Login {
         display: flex;
         height: var(--4, 32px);
         padding: var(--none, 0px);
@@ -162,41 +159,76 @@
 
 
 
-@media(max-width: 660px){
-    .containerLoginTag{
-        /* justify-content: center; */
+@media(max-width: 660px) {
+
+
+    .loginCardFinal {
+        width: 99%;
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+
+    }
+
+
+    .tit1LoginFinal {
+        margin: 10px;
+        display: flex;
+        word-wrap: break-word;
+
+    }
+
+    .containerFormLoginFinal {
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+
+}
+
+@media (min-width:661px) {
+
+    .containerLoginTagFinal {
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        padding: 45px 109px;
-        width: 100%;
-        /* height: 100%; */
-        /* background-color: #F52; */
-        /* background-color: greenyellow; */
     }
 
-    .loginCard{
-        /* width: 312px; */
-        gap: 32px;
-        /* background-color: yellow; */
-    }
-
-    .tit1Login{
-        margin: 32px;
-    }
-
-    .tit2Login{
+    .loginCardFinal {
+        width: 80%;
+        margin-top: 15%;
         display: flex;
-        height: var(--4, 32px);
-        padding: var(--none, 0px);
-        align-items: flex-start;
-        gap: var(--none, 0px);
-        flex-shrink: 0;
-        align-self: stretch;
-    } 
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+
+    .tit1LoginFinal {
+        margin: 10px;
+        display: flex;
+        word-wrap: break-word;
+
+    }
+
+    .containerFormLoginFinal {
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
 }
 
 
-@media(min-width: 1280px){
-    .containerLoginTagFinal{
+@media(min-width: 1280px) {
+    .containerLoginTagFinal {
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -205,13 +237,13 @@
         /* background-color: rgb(34, 255, 144); */
     }
 
-    .loginCardFinal{
+    .loginCardFinal {
         /* background-color: yellow; */
         flex: 2;
     }
-    
-    .imgLoginFinal{
-        background: url("../../images/Login_Cad/img_login-0.png") ;
+
+    .imgLoginFinal {
+        background: url("../../images/Login_Cad/img_login-0.png");
         background-size: cover;
         background-repeat: no-repeat;
         flex: 1;
@@ -219,33 +251,30 @@
         box-sizing: border-box;
     }
 
-    #imgLoginTagCadFinal{
+    #imgLoginTagCadFinal {
         width: 500px;
     }
 
-    .tit1LoginFinal{
+    .tit1LoginFinal {
         margin-bottom: 16px;
     }
 
-    .containerFormLoginFinal{
+    .containerFormLoginFinal {
         /* background-color: red; */
         width: 517px;
         height: 271px;
         margin-top: 16px;
     }
 
-    #imgLoginTagCadFinal{
+    #imgLoginTagCadFinal {
         width: 100px;
     }
-    .loginCardFinal{
+
+    .loginCardFinal {
         /* width: 50%; */
         /* width: 100px;
         height: 100px; */
         /* flex: 1; */
         box-sizing: border-box;
-    }
-
-    .inputsLoginFinal{
-        /* background-color: red; */
     }
 }

@@ -54,3 +54,18 @@
         display: none;
     }
 }
+
+
+@media(max-width:660px){
+.userDataProject{
+    width:90%;
+    display:flex;
+    flex-direction:row;
+}
+.userDataAvatarNameDate{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+}
