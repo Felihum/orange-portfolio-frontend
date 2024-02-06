@@ -1,14 +1,27 @@
 import { useContext } from "react";
 import "./ModalDelete.css"
 import { ModalContext } from "../../context/ModalContext";
+import { deleteProject } from "../../scripts/Api/projects";
 
 // eslint-disable-next-line react/prop-types
-function ModalDelete() {
+function ModalDelete({projectId}) {
+
+    
 
     const {
         openModalDelete,
         setOpenModalDelete
     } = useContext(ModalContext)
+    
+    function callDeleteProject(){
+        try {
+            deleteProject(projectId);
+
+            setOpenModalDelete(false)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     if(openModalDelete){
         return (
@@ -23,7 +36,7 @@ function ModalDelete() {
                         </div>
                         <div className="button-div">
                             <div className="btn-confirm-excluir">
-                                <button>Excluir</button>
+                                <button onClick={() => callDeleteProject()}>Excluir</button>
                             </div>
                             <div className="btn-cancelar-excluir">
                                 <button onClick={() => setOpenModalDelete(false)}>Cancelar</button>

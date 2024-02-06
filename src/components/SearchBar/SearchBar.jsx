@@ -3,11 +3,11 @@ import "./SearchBar.css"
 import { TextField } from "@mui/material";
 
 // eslint-disable-next-line react/prop-types
-function SearchBar({ setSearch }) {
+function SearchBar() {
     return (
         <div className="container-search-bar">
             <h3>Meus projetos</h3>
-            <TextField className="input" onChange={(e) => setSearch(e.target.value)} label="Buscar tags" variant="outlined" />
+            <TextField className="input" label="Buscar tags" variant="outlined" />
         </div>
     );
 }

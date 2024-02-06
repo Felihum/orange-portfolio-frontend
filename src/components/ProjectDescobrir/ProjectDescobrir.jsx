@@ -7,7 +7,7 @@ import { getUserById } from "../../scripts/Api/user";
 import { useEffect, useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-function ProjectDescobrir({ project, setDescription, setTitle, setTags, setLink, onClick }) {
+function ProjectDescobrir({ project, setImage, setDescription, setTitle, setTags, setLink, onClick }) {
 
     const [user, setUser] = useState("");
     //const [tagsFiltradas, setTagsFiltradas] = useState([]);
@@ -25,6 +25,7 @@ function ProjectDescobrir({ project, setDescription, setTitle, setTags, setLink,
     }, [])
 
     function setProjectInformation(){
+        setImage(project.images[0].image)
         setDescription(project.description)
         setTitle(project.titleProject)
         setTags(project.tags)

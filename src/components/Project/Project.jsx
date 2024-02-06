@@ -3,20 +3,14 @@ import EditIcon from "../EditIcon/EditIcon";
 import Tag from "../Tag/Tag";
 import "./Project.css";
 import AvatarIcon from "../AvatarIcon/AvatarIcon";
-import { useContext, useState } from "react";
-import ModalEdit from "../ModalEdit/ModalEdit";
 
 // eslint-disable-next-line react/prop-types
-function Project( {data} ) {
+function Project( {data, setProjectId} ) {
 
-    const [projectId, setProjectId] = useState();
     //console.log(data.id)
     
     return (
         <div className="project-container">
-            <div>
-                <ModalEdit projectId={projectId} />
-            </div>
             <div className="edit-icon-container">
                 <EditIcon projectId={data.id} setProjectId={setProjectId} />
             </div>

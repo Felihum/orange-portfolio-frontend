@@ -1,9 +1,17 @@
 import "./ModalSuccess.css"
 import confirmIcon from "../../images/TextInput.png"
+import { useContext } from "react";
+import { ModalContext } from "../../context/ModalContext";
 
 // eslint-disable-next-line react/prop-types
-function ModalSuccess({ isOpenSuccess, setModalSuccessOpen }) {
-    if(isOpenSuccess){
+function ModalSuccess() {
+
+    const {
+        openModalSuccess,
+        setOpenModalSuccess
+    } = useContext(ModalContext)
+
+    if(openModalSuccess){
         return (
             <div className="bg-modal-success">
                 <div className="modal-success-container">
@@ -17,7 +25,7 @@ function ModalSuccess({ isOpenSuccess, setModalSuccessOpen }) {
                             </div>
                         </div>
                         <div className="button-section">
-                            <button className="btn-voltar" onClick={() => setModalSuccessOpen(false)}>Voltar para Projetos</button>
+                            <button className="btn-voltar" onClick={() => setOpenModalSuccess(false)}>Voltar para Projetos</button>
                         </div>
                     </div>
                 </div>

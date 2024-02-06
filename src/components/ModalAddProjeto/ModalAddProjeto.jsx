@@ -3,33 +3,33 @@ import AddFile from "../AddFile/AddFile";
 import ModalSuccess from "../ModalSuccess/ModalSuccess";
 import "./ModalAddProjeto.css"
 import TextField from "@mui/material/TextField"
-import { format } from 'date-fns';
 //import ModalProjectAdded from "../ModalProjectAdded/ModalProjectAdded";
 import { createProject } from "../../scripts/Api/projects";
 import { ModalContext } from "../../context/ModalContext";
 
 // eslint-disable-next-line react/prop-types
-function ModalAddProjeto({ isOpen, setModalVisualizarOpen, setModalOpen}) {
+function ModalAddProjeto() {
 
     const {
         openModalAdd,
-        setOpenModalAdd
+        setOpenModalAdd,
+        setOpenModalVisual,
+        setOpenModalSuccess
     } = useContext(ModalContext)
 
     const [image, setImage] = useState([])
     const [title, setTitle] = useState("")
-    const [tagsTemp, setTagsTemp] = useState([])
+    const [tags, setTags] = useState("")
     const [link, setLink] = useState("")
     const [description, setDescription] = useState("")
     const [isModalSuccessOpen, setModalSuccessOpen] = useState(false);
 
     async function createProjectDef(){
         try {
-            const tags = [{"name": tagsTemp}];
             const response = await createProject(image, title, tags, link, description);
             if(response){
-                setModalSuccessOpen(response)
-                setModalOpen(false)
+                setOpenModalSuccess(true)
+                setOpenModalAdd(false)
             }
             else{
                 console.log(response)
@@ -62,7 +62,7 @@ function ModalAddProjeto({ isOpen, setModalVisualizarOpen, setModalOpen}) {
                                     <TextField className="input-item" onChange={(e) => setTitle(e.target.value)} label="Título" variant="outlined" />
                                 </div>
                                 <div className="input-default">
-                                    <TextField className="input-item" onChange={(e) => setTagsTemp(e.target.value)} label="Tags" variant="outlined" />
+                                    <TextField className="input-item" onChange={(e) => setTags(e.target.value)} label="Tags" variant="outlined" />
                                 </div>
                                 <div className="input-default">
                                     <TextField className="input-item" onChange={(e) => setLink(e.target.value)} label="Link" variant="outlined" />
@@ -74,7 +74,7 @@ function ModalAddProjeto({ isOpen, setModalVisualizarOpen, setModalOpen}) {
                         </div>
                         <div className="button-container">
                             <div className="div-visualizar">
-                                <button type="button" onClick={() => setModalVisualizarOpen(true)}>Visualizar publicação</button>
+                                <button type="button" onClick={() => setOpenModalVisual(true)}>Visualizar publicação</button>
                             </div>
                             <div className="div-button">
                                 <div className="btn-salvar">

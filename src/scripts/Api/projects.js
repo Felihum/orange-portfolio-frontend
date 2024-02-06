@@ -1,5 +1,15 @@
 import api from "./api";
 
+async function getProjectById(id){
+  try {
+    const response = await api.get("/v1/projects/buscar/" + id)
+
+    return response.data
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 async function getAllProjects(){
     try {
         const response = await api.get("/v1/projects/todos");
@@ -20,17 +30,28 @@ async function getProjectsByTag(tag){
     }
 }
 
+async function deleteProject(id){
+  try {
+    await api.delete("/v1/projects/deletar/" + id);
+
+    window.alert("Projeto deletado")
+  } catch (error) {
+    window.alert(error)
+  }
+}
+
+
 async function updateProject(id, image, titleProject, tags, link, description){
+    const mappingTags = tags ? tags.trim().split(',').map((tag) => {
+      return {name:tag}
+    }) : null
     try {
       const response = await api.patch("/v1/projects/atualizar/" + id, {
         titleProject: titleProject,
         link: link,
         description: description,
-        date: new Date(),
-        user: {
-          id: localStorage.getItem("userId"),
-        },
-        tags: tags.map(tag => ({ name: tag.name })),
+        user: localStorage.getItem("userId"),
+        tags: mappingTags,
         images: [
           {
             image: image,
@@ -46,14 +67,11 @@ async function updateProject(id, image, titleProject, tags, link, description){
 }
 
 async function createProject(image, titleProject, tags, link, description) {
-    console.log(titleProject);
-    console.log(tags);
-    console.log(link);
-    console.log(description);
-    console.log(new Date());
-  
+  const mappingTags = tags ? tags.trim().split(',').map((tag) => {
+    return {name:tag}
+  }) : null
     try {
-      const result = await api.post("/v1/projects/criarProjeto", {
+      await api.post("/v1/projects/criarProjeto", {
         titleProject: titleProject,
         link: link,
         description: description,
@@ -61,7 +79,7 @@ async function createProject(image, titleProject, tags, link, description) {
         user: {
           id: localStorage.getItem("userId"),
         },
-        tags: tags.map(tag => ({ name: tag.name })),
+        tags: mappingTags,
         images: [
           {
             image: image,
@@ -75,4 +93,4 @@ async function createProject(image, titleProject, tags, link, description) {
 }
 
 
-export { getAllProjects, getProjectsByTag, createProject, updateProject }
+export { getAllProjects, getProjectById, getProjectsByTag, createProject, updateProject, deleteProject }

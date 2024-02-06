@@ -26,7 +26,10 @@ function EditMenu({ isOpen, setOpenMenu, projectId, setProjectId }) {
                     }}>Editar</button>
                 </div>
                 <div className="btn-excluir">
-                    <button onClick={() => setOpenModalDelete(true)}>Excluir</button>
+                    <button onClick={() => {
+                        setOpenModalDelete(true)
+                        setProjectId(projectId)
+                    }}>Excluir</button>
                 </div>
             </div>
         );

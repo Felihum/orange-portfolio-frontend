@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleBtn from "../../components/GoogleButton/GogleBtn";
 import { TextField } from "@mui/material";
-import InputPassword from "../../components/inputPassword/InputPass";
+import InputAdornments from "../../components/inputPassword/InputPass";
 import ButtonOrange from "../../components/ButtonOrange/ButtonOrange"
 import InputText from "../../components/inputText/InputText";
 import imageLogin from "../../images/Login_Cad/img_login-0.png"
@@ -68,8 +68,8 @@ export default function LoginTeste(){
                         variant="outlined"
                         onChange={(e) => setEmail(e.target.value)}
                         ></InputText>
-                        <InputPassword setPassword={setPassword}></InputPassword>
-                        <button className="btnLaranja" onClick={callLogin}>ENTRAR</button>
+                        <InputAdornments setPassword={setPassword}></InputAdornments>
+                        <button className="btnLaranjaFinal" onClick={() => callLogin()}>ENTRAR</button>
                     </div>
 
                                  

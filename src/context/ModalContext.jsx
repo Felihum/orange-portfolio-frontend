@@ -9,10 +9,11 @@ function ModalProvider({ children }) {
     const [openModalDelete, setOpenModalDelete] = useState(false);
     const [openModalAdd, setOpenModalAdd] = useState(false);
     const [openModalNotification, setOpenModalNotification] = useState(false);
-    const [openModalVisual, setOpenModalVisual] = useState(false)
+    const [openModalVisual, setOpenModalVisual] = useState(false);
+    const [openModalSuccess, setOpenModalSuccess] = useState(false);
     
     return (
-        <ModalContext.Provider value={{openModalEdit, setOpenModalEdit, openModalDelete, setOpenModalDelete, openModalAdd, setOpenModalAdd, openModalNotification, setOpenModalNotification, openModalVisual, setOpenModalVisual}}>
+        <ModalContext.Provider value={{openModalSuccess, setOpenModalSuccess, openModalEdit, setOpenModalEdit, openModalDelete, setOpenModalDelete, openModalAdd, setOpenModalAdd, openModalNotification, setOpenModalNotification, openModalVisual, setOpenModalVisual}}>
             {children}
         </ModalContext.Provider>
     );

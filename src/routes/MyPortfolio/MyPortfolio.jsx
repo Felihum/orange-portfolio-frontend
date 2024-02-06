@@ -11,11 +11,11 @@ import ModalEdit from "../../components/ModalEdit/ModalEdit";
 import ModalNotification from "../../components/ModalNotification/ModalNotification";
 import Project from "../../components/Project/Project"
 import { useEffect } from "react";
-import ModalBurger from "../../components/ModalBurger/ModalBurger";
 import { getUserById } from "../../scripts/Api/user";
 //import ModalProjectAdded from "../../components/ModalProjectAdded/ModalProjectAdded";
 import { ModalContext } from "../../context/ModalContext";
 import ModalProjectAdded from "../../components/ModalProjectAdded/ModalProjectAdded";
+import ModalSuccess from "../../components/ModalSuccess/ModalSuccess";
 
 function MyPortfolio() {
 
@@ -23,11 +23,15 @@ function MyPortfolio() {
         setOpenModalAdd, 
     } = useContext(ModalContext)
 
-    const[title, setTitle] = useState("")
+    /* const[title, setTitle] = useState("")
     const[tags, setTags] = useState([])
     const[link, setLink] = useState("")
-    const[description, setDescription] = useState("")
+    const[description, setDescription] = useState("") */
     const [projects, setProjects] = useState([]);
+    const [projectId, setProjectId] = useState("");
+    /* const [search, setSearch] = useState('');
+    const lowerSearch = search.toLowerCase(); */
+    //const [show, setShow] = useState(false);
     
     useEffect(() => {
         const userId = localStorage.getItem("userId")
@@ -40,33 +44,19 @@ function MyPortfolio() {
         
     }, [])
 
-    const [search, setSearch] = useState('');
-    const lowerSearch = search.toLowerCase();
-
-    //const projetosFiltrados = projetos.filter((projeto) => projeto.tags.toLowerCase().includes(lowerSearch));
-
-   /*  const [openModalEdit, setOpenModalEdit] = useState(false);
-    const [openModalDelete, setOpenModalDelete] = useState(false);
-    const [openModal, setOpenModal] = useState(false);
-    const [openModalNotification, setOpenModalNotification] = useState(false); */
-
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
     //console.log(projects)
     return (
         <div>
             <div className="modal-section">
                 <ModalAddProjeto />
-                <ModalProjectAdded />
-                <ModalDelete />
+                <ModalProjectAdded projectId={projectId} />
+                <ModalSuccess />
+                <ModalEdit projectId={projectId} />
+                <ModalDelete projectId={projectId} />
                 <ModalNotification />
-                <ModalBurger show={show} handleClose={handleClose} />
             </div>
             <div className="desktop-version">
-                <NavBar handleShow={handleShow} />
+                <NavBar />
                 <div className="card-section">
                     <div className="container-card">
                         <div className="avatar-image-card">
@@ -84,14 +74,14 @@ function MyPortfolio() {
                     </div>
                 </div>
                 <div className="search-section">
-                    <SearchBar setSearch={setSearch} />
+                    <SearchBar />
                 </div>
                 <div className="project-section">
                     {
                         projects.length > 0 ?
                             projects.map((project) => (
                                 
-                                <Project key={project.id} data={project} setDescription={setDescription} setTitle={setTitle} setTags={setTags} setLink={setLink} />
+                                <Project key={project.id} data={project} setProjectId={setProjectId} />
                             ))
                             :
                                 <AddFirst label="Adicione seu primeiro projeto" onClick={setOpenModalAdd} />

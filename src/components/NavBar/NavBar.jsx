@@ -4,15 +4,22 @@ import AvatarIcon from "../AvatarIcon/AvatarIcon";
 import { Link } from "react-router-dom";
 import "./NavBar.css"
 import NotificationIcon from "../NotificationIcon/NotificationIcon";
+import { useState } from "react";
+import MyModalBurger from "../MyModalBurger/MyModalBurger";
 
 // eslint-disable-next-line react/prop-types
 function NavBar({ handleShow, openModalNotification, setOpenModalNotification }) {
+    const [openModalBurger, setOpenModalBurger] = useState(false);
+
+    const handleBurgerClick = () => {
+        setOpenModalBurger(!openModalBurger)
+    }
     return (
         <div className='menu'>
             <div className="rading-container">
                 <div className="header">
                     <div className="burger-container">
-                        <button onClick={() => handleShow(true)}><img src={burger} /></button>
+                        <button onClick={() => handleBurgerClick}><img src={burger} /></button>
                     </div>
                     <div className='container-logo'>
                         <img src={logo} className="image-logo" />
@@ -34,6 +41,7 @@ function NavBar({ handleShow, openModalNotification, setOpenModalNotification })
                         <NotificationIcon openModalNotification={openModalNotification} setOpenModalNotification={setOpenModalNotification} />
                     </div>
                 </div>
+                <MyModalBurger isOpen={openModalBurger} toggleModal={handleBurgerClick} />
             </div>
         </div>
     );

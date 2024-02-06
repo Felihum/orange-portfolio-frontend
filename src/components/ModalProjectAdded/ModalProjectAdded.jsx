@@ -6,8 +6,7 @@ import { useContext } from "react";
 import { ModalContext } from "../../context/ModalContext";
 
 // eslint-disable-next-line react/prop-types
-export default function ModalProjectAdded({ description, link, title, tags }){
-    
+export default function ModalProjectAdded({ image, description, link, title, tags }){
     const {
         openModalVisual,
         setOpenModalVisual
@@ -30,7 +29,7 @@ export default function ModalProjectAdded({ description, link, title, tags }){
                     <UserDetailsForTit tags={tags}></UserDetailsForTit>
 
                     <div className="imgProjectUser-added">
-                        <img id="imgProjectUserArchive" src=""></img>
+                        <img id="imgProjectUserArchive" width={840} src={`data:image/jpg;base64,${image}`}></img>
                     </div>
 
                     <div className="container_description_download_link-added">

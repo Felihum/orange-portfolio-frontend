@@ -13,6 +13,7 @@ function Discover() {
         openModalVisual, setOpenModalVisual
     } = useContext(ModalContext)
 
+    const [image, setImage] = useState([])
     const [projects, setProjects] = useState([])
     const [description, setDescription] = useState("")
     const [title, setTitle] = useState("")
@@ -41,7 +42,7 @@ function Discover() {
     return (
         <div>
             <div className="modal-section">
-                <ModalProjectAdded isOpen={openModalVisual} setModalOpen={setOpenModalVisual} description={description} title={title} link={link} tags={tags}/>
+                <ModalProjectAdded isOpen={openModalVisual} setModalOpen={setOpenModalVisual} image={image} description={description} title={title} link={link} tags={tags}/>
             </div>
             <NavBar />
             <div className="div-geral">
@@ -56,7 +57,7 @@ function Discover() {
                 <div className="project-section">
                     {
                         projects.map((project) => (
-                            <ProjectDescobrir key={project.id} project={project} setDescription={setDescription} setTitle={setTitle} setTags={setTags} setLink={setLink} onClick={setOpenModalVisual}  />
+                            <ProjectDescobrir key={project.id} project={project} setImage={setImage} setDescription={setDescription} setTitle={setTitle} setTags={setTags} setLink={setLink} onClick={setOpenModalVisual}  />
                             
                         ))
                     }
